@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+
+
+<html lang="pt-BR"><head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<style id="exclusive-login-critical-v50">
+html,body{overflow:hidden!important}
+body>main.app{visibility:hidden!important;pointer-events:none!important}
+#exclusiveLoginBackdrop{display:flex!important;position:fixed!important;inset:0!important;z-index:2147483647!important;align-items:center!important;justify-content:center!important;background:#fff1f7!important}
+html.access-granted,html.access-granted body{overflow:auto!important}
+html.access-granted body>main.app{visibility:visible!important;pointer-events:auto!important}
+html.access-granted #exclusiveLoginBackdrop{display:none!important}
+</style><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Cinema da Barbie</title>
+<!-- LOGIN V50: bloqueio visível por padrão, inclusive antes do JavaScript -->
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:#53213f;
+  background:
+    radial-gradient(circle at 12% 0%,rgba(255,190,222,.55),transparent 31%),
+    radial-gradient(circle at 92% 15%,rgba(255,220,235,.65),transparent 28%),
+    linear-gradient(180deg,#fffafd 0%,#fff2f8 55%,#fff9fc 100%);
+}
+.app{width:min(100% - 40px,1280px);margin:auto;padding:18px 0 70px;min-height:100vh}
+.top{display:flex;align-items:center;min-height:74px}
+.brand-logo{display:block;width:230px;max-width:34vw;height:auto;object-fit:contain}
+.hero{
+  position:relative;overflow:hidden;margin-top:12px;border-radius:32px;padding:58px 60px;
+  min-height:350px;display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 86% 18%,rgba(255,255,255,.92) 0 4%,transparent 4.3%),
+    radial-gradient(circle at 78% 68%,rgba(255,255,255,.42) 0 14%,transparent 14.5%),
+    linear-gradient(118deg,#ffd2e6 0%,#ffbad9 45%,#f795c5 100%);
+  box-shadow:0 20px 55px rgba(180,45,111,.12)
+}
+.hero:before{
+  content:"";position:absolute;right:-70px;top:-80px;width:430px;height:430px;border-radius:50%;
+  border:90px solid rgba(255,255,255,.13)
+}
+.hero-copy{position:relative;z-index:2;max-width:770px}
+.eyebrow{font-size:12px;letter-spacing:2px;font-weight:900;color:#d31670;margin-bottom:13px}
+.hero h1{margin:0 0 16px;font-size:48px;line-height:1.03;color:#5c2447;letter-spacing:-1.7px}
+.hero h1 em{font-style:normal;color:#e40870}
+.hero p{margin:0;max-width:710px;font-size:16px;line-height:1.65;color:#74405d}
+.steps{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.steps span{background:rgba(255,255,255,.78);padding:11px 15px;border-radius:999px;font-size:12px;font-weight:700;color:#672847;box-shadow:0 5px 15px rgba(159,46,99,.08)}
+.steps b{display:inline-grid;place-items:center;width:20px;height:20px;margin-right:5px;border-radius:50%;background:#ed2b87;color:white;font-size:10px}
+.search{margin:22px 0 4px;padding:16px 19px;border:1px solid #f6d5e5;background:rgba(255,255,255,.94);border-radius:18px;color:#a66b88;box-shadow:0 8px 25px rgba(151,45,98,.07)}
+.section{margin-top:32px}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:15px}
+.section h2{font-size:22px;margin:0;color:#5a2545}
+.section small{color:#e01a76;font-weight:800}
+.row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.poster{min-width:0}
+.cover{position:relative;aspect-ratio:2/2.85;border-radius:18px;overflow:hidden;box-shadow:0 9px 24px rgba(120,35,78,.15);transition:.2s}
+.cover:hover{transform:translateY(-4px)}
+.cover:after{content:"BARBIE";position:absolute;left:12px;bottom:13px;color:white;font-size:17px;font-weight:900;text-shadow:0 2px 8px rgba(90,0,40,.45)}
+.c1{background:linear-gradient(155deg,#ffb7d6,#ee4c9a)}
+.c2{background:linear-gradient(155deg,#ffd0e2,#d9277c)}
+.c3{background:linear-gradient(155deg,#f8a6cc,#ff6bac)}
+.c4{background:linear-gradient(155deg,#ffd7e8,#f178ad)}
+.c5{background:linear-gradient(155deg,#ffbed9,#e84692)}
+.c6{background:linear-gradient(155deg,#f9d3e4,#d95b98)}
+.poster b{display:block;font-size:13px;line-height:1.25;margin-top:9px;color:#642849}
+.poster span{font-size:11px;color:#a87890}
+.locked{margin-top:36px;padding:28px 32px;border-radius:28px;background:linear-gradient(125deg,#f34b9c,#d91470);color:white;display:flex;justify-content:space-between;align-items:center;box-shadow:0 15px 38px rgba(191,24,105,.22)}
+.lock-label{font-size:10px;letter-spacing:1.5px;font-weight:900;opacity:.82;margin-bottom:6px}
+.locked h3{margin:0 0 7px;font-size:21px}.locked p{margin:0;font-size:12px;color:#ffe4f1}
+.unlock{background:white;color:#d71972;padding:12px 17px;border-radius:999px;font-size:11px;font-weight:900;white-space:nowrap}
+
+@media(max-width:900px){
+ .app{width:min(100% - 28px,720px)}
+ .brand-logo{width:200px;max-width:48vw}
+ .hero{padding:38px 34px;min-height:300px}
+ .hero h1{font-size:38px}
+ .row{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:520px){
+ .app{width:100%;max-width:442px;padding:10px 16px 50px}
+ .top{min-height:58px;justify-content:center}
+ .brand-logo{width:165px;max-width:60vw}
+ .hero{margin-top:8px;min-height:0;padding:26px 21px;border-radius:24px;background:linear-gradient(145deg,#ffd6e7,#f9a7ce)}
+ .hero:before{width:250px;height:250px;border-width:55px;right:-100px;top:-80px}
+ .eyebrow{font-size:9px;letter-spacing:1.5px;margin-bottom:9px}
+ .hero h1{font-size:28px;letter-spacing:-.8px;margin-bottom:12px}
+ .hero p{font-size:13px;line-height:1.55}
+ .steps{display:grid;grid-template-columns:1fr;margin-top:17px;gap:7px}
+ .steps span{padding:9px 11px;font-size:11px}
+ .search{margin-top:17px;padding:13px 14px;border-radius:15px;font-size:13px}
+ .section{margin-top:22px}
+ .section h2{font-size:17px}
+ .section small{font-size:11px}
+ .row{display:flex;overflow-x:auto;gap:11px;padding:1px 1px 7px;scrollbar-width:none}
+ .row::-webkit-scrollbar{display:none}
+ .poster{width:112px;min-width:112px}
+ .cover{height:158px;aspect-ratio:auto;border-radius:15px}
+ .cover:hover{transform:none}
+ .poster b{font-size:11.5px;margin-top:7px}.poster span{font-size:10px}
+ .locked{margin-top:24px;padding:18px;border-radius:22px;gap:12px}
+ .locked h3{font-size:15px}.locked p{font-size:10px}.unlock{padding:10px 11px;font-size:9px}
+}
+
+/* Topo: logo + atalhos sociais */
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.social-links{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-left:auto;
+}
+.social-btn{
+  width:39px;
+  height:39px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  text-decoration:none;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(231,40,126,.14);
+  box-shadow:0 5px 16px rgba(160,38,94,.08);
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.social-btn svg{width:19px;height:19px;fill:#e4287e}
+.social-btn:hover{
+  transform:translateY(-2px);
+  background:#fff;
+  box-shadow:0 7px 19px rgba(218,35,117,.17);
+}
+
+/* Selo Acesso liberado */
+.access-pill{
+  width:max-content;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  margin-bottom:13px;
+  border-radius:999px;
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(255,255,255,.86);
+  box-shadow:0 5px 17px rgba(159,46,99,.08);
+  font-size:10px;
+  letter-spacing:1.25px;
+  color:#c81769;
+}
+.access-dot{
+  width:8px;
+  height:8px;
+  flex:0 0 8px;
+  border-radius:50%;
+  background:#28c76f;
+  box-shadow:0 0 8px rgba(40,199,111,.82);
+  animation:accessPulse 1.55s ease-out infinite;
+}
+@keyframes accessPulse{
+  0%{box-shadow:0 0 0 0 rgba(40,199,111,.48),0 0 7px rgba(40,199,111,.8)}
+  65%{box-shadow:0 0 0 7px rgba(40,199,111,0),0 0 11px rgba(40,199,111,.62)}
+  100%{box-shadow:0 0 0 0 rgba(40,199,111,0),0 0 7px rgba(40,199,111,.8)}
+}
+
+@media(max-width:520px){
+  .top{
+    min-height:58px;
+    justify-content:space-between;
+  }
+  .brand-logo{
+    width:150px;
+    max-width:48vw;
+  }
+  .social-links{gap:6px}
+  .social-btn{
+    width:32px;
+    height:32px;
+  }
+  .social-btn svg{
+    width:16px;
+    height:16px;
+  }
+  .access-pill{
+    font-size:9px;
+    padding:7px 10px;
+    gap:7px;
+    margin-bottom:10px;
+  }
+  .access-dot{
+    width:7px;
+    height:7px;
+    flex-basis:7px;
+  }
+}
+
+
+/* Catálogo: cartazes maiores + neon rosa */
+.row{
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:22px 18px;
+}
+.poster{position:relative}
+.cover{
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:
+    0 0 13px rgba(255,35,139,.18),
+    0 0 30px rgba(255,35,139,.11),
+    0 12px 27px rgba(116,22,68,.15);
+}
+.cover:hover{
+  transform:translateY(-5px) scale(1.012);
+  box-shadow:
+    0 0 12px rgba(255,35,139,.42),
+    0 0 30px rgba(255,35,139,.30),
+    0 15px 34px rgba(116,22,68,.18);
+}
+.poster-click{
+  cursor:pointer;
+}
+
+/* Player/modal */
+.movie-modal{
+  position:fixed;
+  z-index:9999;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(25,0,13,.76);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.movie-modal.is-open{display:flex}
+@supports (-webkit-touch-callout:none){
+  .movie-modal{height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .movie-dialog{width:calc(100vw - 24px);max-width:100%;overflow:hidden}
+  .drive-player{width:100%;height:auto;aspect-ratio:16/9;box-sizing:border-box}
+}
+.movie-dialog{
+  position:relative;
+  width:min(962px,96vw);
+  max-height:94vh;
+  overflow:auto;
+  padding:28px 29px 28px;
+  border-radius:32px;
+  background:linear-gradient(155deg,#310015 0%,#19000c 78%);
+  border:1px solid rgba(255,38,137,.65);
+  box-shadow:
+    0 0 35px rgba(255,20,125,.28),
+    0 26px 70px rgba(0,0,0,.48);
+}
+.movie-modal-title{
+  margin:3px 58px 15px 0;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  color:#ff9bc8;
+  text-transform:uppercase;
+}
+.movie-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  z-index:3;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(7,0,4,.62);
+  color:#fff;
+  font-size:30px;
+  font-weight:300;
+  line-height:1;
+  cursor:pointer;
+}
+.drive-player{
+  width:100%;
+  aspect-ratio:16/9;
+  display:block;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:28px;
+  background:#000;
+}
+.telegram-player-btn{
+  margin-top:20px;
+  min-height:70px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  padding:14px 24px;
+  text-decoration:none;
+  color:#fff;
+  font-size:19px;
+  font-weight:900;
+  background:linear-gradient(90deg,#ff76b5 0%,#e23891 48%,#c9006e 100%);
+  box-shadow:0 10px 26px rgba(238,33,132,.26);
+}
+.telegram-player-btn svg{width:27px;height:27px;fill:#fff}
+.modal-hint{
+  margin:17px 0 0;
+  text-align:center;
+  color:rgba(255,255,255,.45);
+  font-size:14px;
+}
+@media(max-width:900px){
+  .row{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:520px){
+  .row{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    overflow:visible;
+    gap:19px 12px;
+  }
+  .poster{width:auto;min-width:0}
+  .cover{height:auto;aspect-ratio:2/2.85}
+  .movie-dialog{padding:20px 14px 20px;border-radius:24px}
+  .movie-modal{padding:12px}
+  .movie-modal-title{font-size:10px;letter-spacing:.8px;margin-bottom:12px}
+  .movie-close{width:38px;height:38px;font-size:24px}
+  .drive-player{border-radius:17px}
+  .telegram-player-btn{min-height:56px;font-size:14px;margin-top:14px}
+  .modal-hint{font-size:11px;margin-top:12px}
+}
+
+
+/* Franquias bloqueadas no final do catálogo */
+.locked-franchises{
+  margin-top:34px;
+  padding-top:25px;
+  border-top:1px solid rgba(230,41,126,.14);
+}
+.locked-franchises-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:16px;
+}
+.locked-franchises-head h2{
+  margin:0;
+  font-size:22px;
+  color:#5a2545;
+}
+.locked-franchises-head p{
+  margin:5px 0 0;
+  font-size:12px;
+  color:#9b6d84;
+}
+.locked-franchises-grid{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:16px;
+}
+.franchise-locked{
+  min-width:0;
+}
+.franchise-cover{
+  position:relative;
+  aspect-ratio:2/2.85;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.9);
+  background:
+    radial-gradient(circle at 50% 23%,rgba(255,255,255,.28),transparent 28%),
+    linear-gradient(150deg,#ffb3d4,#d51c76 72%);
+  box-shadow:
+    0 0 13px rgba(255,35,139,.20),
+    0 0 29px rgba(255,35,139,.12),
+    0 12px 27px rgba(116,22,68,.15);
+}
+.franchise-cover:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(44,0,21,.06),rgba(40,0,20,.56));
+  backdrop-filter:blur(1.6px);
+}
+.franchise-name{
+  position:absolute;
+  z-index:2;
+  left:11px;
+  right:11px;
+  bottom:14px;
+  color:#fff;
+  font-weight:900;
+  font-size:15px;
+  line-height:1.08;
+  text-shadow:0 2px 10px rgba(75,0,35,.55);
+}
+.lock-badge{
+  position:absolute;
+  z-index:3;
+  top:10px;
+  right:10px;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:rgba(38,0,18,.74);
+  border:1px solid rgba(255,255,255,.36);
+  color:#fff;
+  box-shadow:0 4px 15px rgba(0,0,0,.24);
+}
+.lock-badge svg{width:16px;height:16px;fill:currentColor}
+.franchise-locked b{
+  display:block;
+  margin-top:8px;
+  color:#642849;
+  font-size:12px;
+  line-height:1.25;
+}
+.franchise-locked span{
+  font-size:10px;
+  color:#d51c76;
+  font-weight:800;
+}
+@media(max-width:900px){
+  .locked-franchises-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:520px){
+  .locked-franchises{margin-top:28px;padding-top:20px}
+  .locked-franchises-head h2{font-size:17px}
+  .locked-franchises-head p{font-size:10px}
+  .locked-franchises-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 11px}
+  .franchise-cover{border-radius:15px}
+  .franchise-name{font-size:13px}
+}
+
+
+/* Hero profissional */
+.hero{
+  min-height:330px;
+  padding:54px 58px;
+  border:1px solid rgba(255,255,255,.78);
+  background:
+    radial-gradient(circle at 84% 22%,rgba(255,255,255,.58) 0 7%,transparent 7.5%),
+    radial-gradient(circle at 75% 65%,rgba(255,255,255,.18) 0 18%,transparent 18.5%),
+    linear-gradient(118deg,#fff0f7 0%,#ffd0e4 27%,#f78cbb 65%,#e84b97 100%);
+  box-shadow:0 22px 60px rgba(173,34,99,.16),inset 0 1px 0 rgba(255,255,255,.72);
+}
+.hero:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,rgba(255,255,255,.24),transparent 44%,rgba(255,255,255,.08));
+}
+.hero-copy{position:relative;z-index:2}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;max-width:700px}
+.hero p{max-width:690px}
+.access-pill{background:rgba(255,255,255,.80);backdrop-filter:blur(8px);border-color:rgba(255,255,255,.92)}
+
+/* Segmentos cronológicos */
+.era{margin-top:32px}
+.era-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:15px}
+.era-title{margin:0;color:#5a2545;font-size:22px}
+.era-sub{margin:4px 0 0;color:#a17188;font-size:11px}
+.era-count{font-size:10px;font-weight:900;color:#d71972;background:#ffe0ec;border-radius:999px;padding:8px 11px;white-space:nowrap}
+.era-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px 18px}
+@media(max-width:900px){.era-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){
+ .hero{padding:27px 21px;background:linear-gradient(145deg,#fff0f7 0%,#ffc6df 45%,#ef6aaa 100%)}
+ .era{margin-top:25px}.era-title{font-size:17px}.era-sub{font-size:10px}
+ .era-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:19px 12px}
+}
+
+
+/* Cards bloqueados clicáveis */
+.franchise-link{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+}
+.franchise-link .franchise-cover{
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.franchise-link:hover .franchise-cover{
+  transform:translateY(-5px) scale(1.012);
+  box-shadow:
+    0 0 13px rgba(255,35,139,.42),
+    0 0 31px rgba(255,35,139,.30),
+    0 15px 34px rgba(116,22,68,.18);
+}
+@media(max-width:520px){
+  .franchise-link:hover .franchise-cover{transform:none}
+}
+
+
+/* Pesquisa funcional do catálogo */
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:0 16px;
+}
+.search-icon{
+  width:19px;
+  height:19px;
+  flex:0 0 19px;
+  fill:#d82a79;
+}
+.search-box input{
+  width:100%;
+  min-width:0;
+  height:52px;
+  padding:0;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#642849;
+  font:inherit;
+  font-size:14px;
+}
+.search-box input::placeholder{color:#aa718d}
+.search-clear{
+  display:none;
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
+  border:0;
+  border-radius:50%;
+  background:#ffe3ef;
+  color:#cf2470;
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+}
+.search-clear.show{display:grid;place-items:center}
+.search-empty{
+  display:none;
+  margin:18px 0 4px;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  color:#98677f;
+  font-size:13px;
+  background:rgba(255,255,255,.72);
+  border:1px solid #f5d6e4;
+}
+.search-empty.show{display:block}
+.poster.search-hidden{display:none!important}
+.era.search-hidden{display:none!important}
+
+
+.cover[style*="background-image"]:after{content:none!important}
+
+
+.cover[style*="background-image"]:after{content:none!important}
+
+/* Banner — tipografia mais moderna + degradê da identidade Cinema da Barbie */
+.hero{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(255,190,121,.20),transparent 25%),
+    linear-gradient(112deg,#4a082a 0%,#72103f 36%,#a81c5d 67%,#e24c86 100%) !important;
+  border:1px solid rgba(255,126,180,.28) !important;
+  box-shadow:
+    0 22px 58px rgba(105,10,54,.22),
+    inset 0 1px 0 rgba(255,255,255,.10) !important;
+}
+.hero:after{
+  background:
+    linear-gradient(105deg,rgba(255,255,255,.035),transparent 43%),
+    radial-gradient(circle at 80% 100%,rgba(255,119,168,.18),transparent 35%) !important;
+}
+.hero h1{
+  font-family:Montserrat,Arial,sans-serif !important;
+  font-size:clamp(34px,4.8vw,60px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-2.2px !important;
+  font-weight:900 !important;
+  color:#fff !important;
+  max-width:760px !important;
+}
+.hero h1 em{
+  font-family:inherit !important;
+  font-style:normal !important;
+  font-weight:900 !important;
+  background:linear-gradient(90deg,#ff1684 0%,#ff6e9f 48%,#ffc35c 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent !important;
+}
+.hero p{
+  color:rgba(255,239,247,.88) !important;
+  font-size:16px !important;
+  line-height:1.65 !important;
+  font-weight:500 !important;
+  max-width:720px !important;
+}
+.hero .steps{
+  color:#fff;
+}
+.hero .step{
+  background:rgba(255,255,255,.10) !important;
+  border-color:rgba(255,255,255,.14) !important;
+  color:#fff !important;
+  backdrop-filter:blur(7px);
+}
+.hero .access-pill{
+  background:rgba(255,255,255,.10) !important;
+  border-color:rgba(255,255,255,.18) !important;
+  color:#fff !important;
+  box-shadow:none !important;
+  backdrop-filter:blur(8px);
+}
+@media(max-width:520px){
+  .hero{
+    background:
+      radial-gradient(circle at 92% 7%,rgba(255,190,121,.15),transparent 25%),
+      linear-gradient(145deg,#4b082b 0%,#801247 55%,#d13a78 100%) !important;
+  }
+  .hero h1{
+    font-size:35px !important;
+    letter-spacing:-1.5px !important;
+  }
+  .hero p{
+    font-size:13px !important;
+    line-height:1.58 !important;
+  }
+}
+
+
+.cover[style*="background-image"]::after,
+.cover[style*="background-image"]:after{content:none!important;display:none!important;}
+.cover[style*="background-image"]{background-repeat:no-repeat!important;background-size:cover!important;background-position:center!important;}
+
+</style>
+<style id="dreamhouse-inline-ad-style">
+.dreamhouse-inline-ad{
+  width:100%;
+  margin:20px 0 24px;
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  min-height:178px;
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(250px,.92fr);
+  align-items:stretch;
+  background:linear-gradient(105deg,#fff0f7 0%,#ffd5e9 48%,#ffaad2 100%);
+  border:1px solid rgba(231,35,125,.18);
+  box-shadow:0 10px 28px rgba(180,29,98,.10);
+}
+.dreamhouse-inline-ad__content{
+  padding:18px 20px 18px 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  position:relative;
+  z-index:2;
+}
+.dreamhouse-inline-ad__logo{
+  width:min(250px,70%);
+  height:auto;
+  display:block;
+  margin:0 0 7px;
+}
+.dreamhouse-inline-ad__text{
+  margin:0;
+  max-width:560px;
+  font-size:clamp(16px,1.65vw,21px);
+  line-height:1.28;
+  font-weight:800;
+  color:#7e174c;
+}
+.dreamhouse-inline-ad__text strong{color:#e31c78}
+.dreamhouse-inline-ad__meta{
+  margin-top:5px;
+  font-size:13px;
+  font-weight:700;
+  color:#9a4a70;
+}
+.dreamhouse-inline-ad__button{
+  margin-top:11px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 16px;
+  border-radius:999px;
+  background:#e91e7c;
+  color:#fff !important;
+  text-decoration:none !important;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.04em;
+  box-shadow:0 7px 18px rgba(233,30,124,.22);
+}
+.dreamhouse-inline-ad__visual{
+  min-height:178px;
+  background-image:linear-gradient(90deg,#ffd5e9 0%,rgba(255,213,233,.16) 25%,rgba(255,213,233,0) 48%),url('assets/img-001-a6f2c2a90a988a.webp');
+  background-size:cover;
+  background-position:center;
+}
+@media(max-width:650px){
+  .dreamhouse-inline-ad{
+    min-height:150px;
+    grid-template-columns:1.08fr .92fr;
+    border-radius:18px;
+    margin:16px 0 20px;
+  }
+  .dreamhouse-inline-ad__content{padding:14px 10px 14px 14px}
+  .dreamhouse-inline-ad__logo{width:min(170px,92%);margin-bottom:5px}
+  .dreamhouse-inline-ad__text{font-size:13px;line-height:1.24}
+  .dreamhouse-inline-ad__meta{font-size:10px;margin-top:4px}
+  .dreamhouse-inline-ad__button{min-height:32px;padding:0 11px;font-size:9px;margin-top:8px}
+  .dreamhouse-inline-ad__visual{min-height:150px;background-position:58% center}
+}
+</style>
+<style id="barbie-b-watermark">
+.hero:before{
+  content:"" !important;
+  position:absolute !important;
+  right:18px !important;
+  top:50% !important;
+  transform:translateY(-50%) rotate(-7deg) !important;
+  width:380px !important;
+  height:380px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:url("assets/img-002-01c665892b28c1.webp") center/contain no-repeat !important;
+  filter:grayscale(1) brightness(0) invert(1) !important;
+  opacity:.095 !important;
+  pointer-events:none !important;
+  z-index:1 !important;
+}
+@media(max-width:520px){
+  .hero:before{
+    width:235px !important;
+    height:235px !important;
+    right:-14px !important;
+    top:48% !important;
+    opacity:.085 !important;
+  }
+}
+</style>
+
+<style id="dreamhouse-code-style">
+.dreamhouse-access{max-width:1180px;margin:28px auto 10px;padding:0 18px}.dreamhouse-locked-card{position:relative;width:100%;min-height:240px;border:0;border-radius:24px;overflow:hidden;padding:0;background:#f8d5e8;cursor:pointer;display:block;box-shadow:0 12px 34px rgba(177,20,103,.14);text-align:left}.dreamhouse-locked-card img{width:100%;height:300px;object-fit:cover;display:block;filter:brightness(.62)}.dreamhouse-locked-card:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(88,0,45,.65),rgba(88,0,45,.12))}.dreamhouse-lock-badge,.dreamhouse-lock-title,.dreamhouse-lock-sub{position:absolute;z-index:2;left:28px;color:#fff}.dreamhouse-lock-badge{top:28px;font:800 12px/1 Montserrat,sans-serif;letter-spacing:.08em;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);padding:10px 12px;border-radius:999px}.dreamhouse-lock-title{bottom:58px;font:700 30px/1.05 "DM Serif Display",serif}.dreamhouse-lock-sub{bottom:30px;font:600 14px/1.2 Montserrat,sans-serif}.dreamhouse-season-head h2{margin:0;color:#c21872}.dreamhouse-season-head p{margin:5px 0 18px;color:#7d5a6b}.dreamhouse-season-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}.dreamhouse-season-card .cover{position:relative;overflow:hidden;background:#f5c9df}.dreamhouse-season-card .cover img{width:100%;height:100%;object-fit:cover;display:block}.season-overlay{position:absolute;left:10px;right:10px;bottom:10px;background:#b11467;color:#fff;border-radius:9px;padding:8px 5px;text-align:center;font:800 11px/1 Montserrat,sans-serif;letter-spacing:.04em}.dreamhouse-code-modal{position:fixed;inset:0;z-index:99999;background:rgba(28,8,20,.72);backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;padding:18px}.dreamhouse-code-modal.open{display:flex}.dreamhouse-code-box{width:min(420px,100%);background:#fff;border-radius:24px;padding:28px;box-shadow:0 24px 80px rgba(0,0,0,.3);text-align:center}.dreamhouse-code-box h3{margin:0 0 7px;color:#c21872;font-size:26px}.dreamhouse-code-box p{margin:0 0 18px;color:#765766}.dreamhouse-code-input{width:100%;height:52px;border:2px solid #f1b7d5;border-radius:14px;padding:0 14px;text-align:center;font:700 16px Montserrat,sans-serif;text-transform:uppercase;outline:none}.dreamhouse-code-input:focus{border-color:#e62a8b;box-shadow:0 0 0 4px rgba(230,42,139,.1)}.dreamhouse-code-submit{width:100%;height:50px;margin-top:12px;border:0;border-radius:14px;background:#e62a8b;color:#fff;font:800 14px Montserrat,sans-serif;cursor:pointer}.dreamhouse-code-close{margin-top:12px;border:0;background:none;color:#8a6a7a;cursor:pointer}.dreamhouse-code-error{min-height:18px;margin-top:9px!important;margin-bottom:0!important;color:#d32766!important;font-size:12px}.dreamhouse-seasons[hidden]{display:none!important}
+.dreamhouse-seasons{scroll-margin-top:24px;margin-top:26px;padding-top:8px}.dreamhouse-catalog-card.dreamhouse-unlocked .dreamhouse-catalog-cover:after{background:rgba(65,10,42,.04)}
+@media(max-width:900px){.dreamhouse-season-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.dreamhouse-access{padding:0 12px;margin-top:20px}.dreamhouse-locked-card img{height:220px}.dreamhouse-lock-badge{left:18px;top:18px}.dreamhouse-lock-title{left:18px;bottom:52px;font-size:23px}.dreamhouse-lock-sub{left:18px;bottom:26px}.dreamhouse-season-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dreamhouse-code-box{padding:22px 18px;border-radius:20px}}
+</style>
+
+<style id="dreamhouse-catalog-card-style">
+.dreamhouse-catalog-cover{position:relative;cursor:pointer;overflow:hidden}
+.dreamhouse-catalog-cover:after{content:"";position:absolute;inset:0;background:rgba(65,10,42,.20);transition:.2s ease}
+.dreamhouse-catalog-cover:hover:after{background:rgba(65,10,42,.10)}
+.dreamhouse-catalog-lock{position:absolute;z-index:3;right:10px;top:10px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.92);box-shadow:0 5px 16px rgba(88,0,45,.20);font-size:16px}
+</style>
+
+<style id="dreamhouse-v31-style">
+.dreamhouse-catalog-cover{position:relative!important;overflow:hidden!important}
+.dreamhouse-catalog-cover::before{content:"";position:absolute;inset:-7px;background-image:var(--dreamhouse-cover);background-size:cover;background-position:center;filter:blur(5px) brightness(.70);transform:scale(1.04);z-index:0}
+.dreamhouse-catalog-cover::after{content:""!important;position:absolute!important;inset:0!important;background:rgba(61,8,39,.18)!important;z-index:1!important}
+.dreamhouse-catalog-lock{left:50%!important;right:auto!important;top:50%!important;transform:translate(-50%,-50%)!important;width:54px!important;height:54px!important;font-size:24px!important;z-index:3!important}
+.dreamhouse-catalog-card.dreamhouse-unlocked .dreamhouse-catalog-cover::before{filter:none;transform:scale(1.01)}
+.dreamhouse-catalog-card.dreamhouse-unlocked .dreamhouse-catalog-cover::after{background:transparent!important}
+.dreamhouse-seasons{margin:26px 0 34px!important}
+</style>
+
+<style id="player-v33-css">
+.poster-click{cursor:pointer!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important}
+.movie-modal.is-open{display:flex!important;visibility:visible!important;opacity:1!important}
+@media(max-width:520px){.movie-modal{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;padding:12px!important;box-sizing:border-box!important}.movie-dialog{width:calc(100vw - 24px)!important;max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 24px)!important;box-sizing:border-box!important}.drive-player{width:100%!important;height:auto!important;aspect-ratio:16/9!important;display:block!important}}
+</style>
+
+<style id="dreamhouse-v35-only">
+.dreamhouse-catalog-cover>img{width:100%;height:100%;object-fit:cover;display:block;filter:blur(4px) brightness(.72);transform:scale(1.035)}
+.season-overlay{background:#b11467!important;opacity:1!important;z-index:4!important}
+</style>
+
+<style id="dreamhouse-v36-fix">
+/* Correção isolada do card Dreamhouse e das capas de temporadas */
+.dreamhouse-catalog-card{min-width:0!important;display:block!important;}
+.dreamhouse-catalog-card .dreamhouse-catalog-cover{display:block!important;position:relative!important;aspect-ratio:2/2.85!important;width:100%!important;height:auto!important;border-radius:18px!important;overflow:hidden!important;background:#f5c9df!important;}
+.dreamhouse-catalog-card .dreamhouse-catalog-cover::before{display:none!important;content:none!important;}
+.dreamhouse-catalog-card .dreamhouse-catalog-cover::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;background:rgba(65,10,42,.16)!important;z-index:2!important;pointer-events:none!important;}
+.dreamhouse-catalog-card .dreamhouse-catalog-cover>img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important;position:absolute!important;inset:0!important;object-fit:cover!important;filter:blur(4px) brightness(.72)!important;transform:scale(1.035)!important;z-index:1!important;}
+.dreamhouse-catalog-card .dreamhouse-catalog-lock{display:grid!important;z-index:4!important;}
+.dreamhouse-catalog-card>b{display:block!important;margin-top:10px!important;color:#65133e!important;font-weight:800!important;line-height:1.2!important;}
+.dreamhouse-catalog-card>span:not(.dreamhouse-catalog-lock){display:block!important;margin-top:5px!important;color:#c21872!important;font-size:13px!important;font-weight:700!important;line-height:1.2!important;}
+.dreamhouse-season-card .cover::after,.dreamhouse-season-card .cover:after{content:none!important;display:none!important;}
+.dreamhouse-season-card .cover>img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;}
+.dreamhouse-season-card .season-overlay{z-index:3!important;color:#fff!important;}
+</style>
+
+<style id="exclusive-login-v40">
+html.login-locked,html.login-locked body{overflow:hidden!important}
+html.login-locked body>main,html.login-locked body>.app{visibility:hidden!important;pointer-events:none!important;user-select:none!important}
+#exclusiveLoginBackdrop{display:none;position:fixed;inset:0;z-index:2147483600;align-items:center;justify-content:center;padding:20px;background:#fff1f7}
+html.login-locked #exclusiveLoginBackdrop{display:flex!important}
+#exclusiveLoginBackdrop[hidden]{display:none!important}
+.exclusive-login-card{width:min(390px,calc(100vw - 32px));box-sizing:border-box;background:rgba(255,255,255,.97);border:1px solid rgba(231,51,126,.16);border-radius:28px;padding:28px 24px 24px;box-shadow:0 24px 70px rgba(126,22,65,.20);text-align:center;font-family:inherit;color:#6f173b}
+.exclusive-lock-icon{width:62px;height:62px;margin:0 auto 12px;display:grid;place-items:center;border-radius:50%;background:#fff0f6;box-shadow:0 8px 24px rgba(231,51,126,.16)}
+.exclusive-lock-icon svg{width:34px;height:34px;display:block}
+.exclusive-login-card h2{margin:0 0 22px;font-size:25px;line-height:1.05;font-weight:900;letter-spacing:-.4px;color:#8a1747}.exclusive-login-card h2 strong{color:#e7337e}
+.exclusive-field{text-align:left;margin:0 0 13px}.exclusive-field label{display:block;margin:0 0 6px;font-size:13px;font-weight:800;color:#7b2448}.exclusive-field input{width:100%;height:48px;box-sizing:border-box;border:1.5px solid #f0b4cc;border-radius:14px;background:#fff8fb;padding:0 14px;font:600 15px/1 inherit;color:#5f1735;outline:none}.exclusive-field input:focus{border-color:#e7337e;box-shadow:0 0 0 3px rgba(231,51,126,.10)}
+.exclusive-enter{width:100%;height:49px;border:0;border-radius:14px;background:#e7337e;color:#fff;font:900 14px/1 inherit;letter-spacing:.3px;cursor:pointer;box-shadow:0 8px 20px rgba(231,51,126,.23);margin-top:4px}.exclusive-enter:active{transform:translateY(1px)}
+#exclusiveLoginError{min-height:18px;margin:9px 0 0;font-size:12px;font-weight:700;color:#c52c59}
+.exclusive-support{height:47px;margin-top:13px;border-radius:14px;background:#bff1c9;color:#176a38;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;font:1000 14px/1 inherit;letter-spacing:.45px}.exclusive-support img{width:22px;height:22px;display:block;object-fit:contain}
+@media(max-width:520px){#exclusiveLoginBackdrop{padding:16px}.exclusive-login-card{padding:25px 20px 21px;border-radius:24px}.exclusive-login-card h2{font-size:23px}.exclusive-lock-icon{width:58px;height:58px}}
+</style>
+<style id="exclusive-login-force-v50">
+#exclusiveLoginBackdrop{display:flex!important;visibility:visible!important;opacity:1!important}
+body>main.app{visibility:hidden!important;pointer-events:none!important}
+html.access-granted #exclusiveLoginBackdrop{display:none!important;visibility:hidden!important;opacity:0!important}
+html.access-granted body>main.app{visibility:visible!important;pointer-events:auto!important}
+</style>
+
+<script id="exclusive-login-core-v51">
+function BarbieLogin(e){
+  if(e){ if(e.preventDefault)e.preventDefault(); if(e.stopPropagation)e.stopPropagation(); }
+  var u=document.getElementById('exclusiveUser');
+  var p=document.getElementById('exclusivePass');
+  var err=document.getElementById('exclusiveLoginError');
+  var overlay=document.getElementById('exclusiveLoginBackdrop');
+  if(!u||!p||!overlay) return false;
+  var username=(u.value||'').replace(/^\s+|\s+$/g,'');
+  var password=p.value||'';
+  var okUser=(username==='BARBIEGIRL1524'||username==='Barbiegirl1524'||username==='barbiegirl1524'||username==='BarbieGirl1524');
+  var okPass=(password==='barbie1524'||password==='BARBIE1524'||password==='Barbie1524');
+  if(okUser && okPass){
+    if(err) err.textContent='';
+    document.documentElement.classList.add('access-granted');
+    overlay.style.setProperty('display','none','important');
+    overlay.style.setProperty('visibility','hidden','important');
+    overlay.style.setProperty('opacity','0','important');
+    document.documentElement.style.setProperty('overflow','auto','important');
+    document.body.style.setProperty('overflow','auto','important');
+    var app=document.querySelector('main.app');
+    if(app){app.style.setProperty('visibility','visible','important');app.style.setProperty('pointer-events','auto','important');}
+  }else{
+    if(err) err.textContent='Usuário ou senha incorretos.';
+    p.value=''; p.focus();
+  }
+  return false;
+}
+</script>
+</head>
+<body>
+<div id="exclusiveLoginBackdrop" role="dialog" aria-modal="true" aria-labelledby="exclusiveLoginTitle">
+  <div class="exclusive-login-card">
+    <div class="exclusive-lock-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.5 10V7.5a4.5 4.5 0 0 1 9 0V10" stroke="#e7337e" stroke-width="2.2" stroke-linecap="round"/><rect x="5" y="10" width="14" height="11" rx="3" fill="#e7337e"/><circle cx="12" cy="15.2" r="1.5" fill="white"/><path d="M12 16.5V18" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+    <h2 id="exclusiveLoginTitle">Acesso <strong>EXCLUSIVO</strong></h2>
+    <form id="exclusiveLoginForm" autocomplete="off" action="#" method="post" onsubmit="return BarbieLogin(event);">
+      <div class="exclusive-field"><label for="exclusiveUser">Usuário</label><input id="exclusiveUser" name="username" type="text" autocomplete="username" required></div>
+      <div class="exclusive-field"><label for="exclusivePass">Senha</label><input id="exclusivePass" name="password" type="password" autocomplete="current-password" required></div>
+      <button class="exclusive-enter" id="exclusiveLoginEnter" type="submit">ACESSAR</button>
+      <div id="exclusiveLoginError" aria-live="polite"></div>
+    </form>
+    <a class="exclusive-support" href="https://wa.me/5521984598649" target="_blank" rel="noopener"><img src="data:image/png;base64,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" alt="" aria-hidden="true">SUPORTE</a>
+  </div>
+</div>
+
+
+<main class="app">
+<header class="top">
+<img alt="Cinema da Barbie" class="brand-logo" src="assets/img-003-50b62fc47ec787.webp"/>
+<nav aria-label="Redes sociais" class="social-links">
+<a aria-label="Telegram" class="social-btn telegram" href="https://t.me/+f6oQa4lSD4U2ZGU5" rel="noopener noreferrer" target="_blank" title="Telegram">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21.7 3.4 18.5 19c-.24 1.1-.88 1.37-1.78.85l-4.88-3.6-2.35 2.27c-.26.26-.48.48-.98.48l.35-4.97 9.04-8.17c.39-.35-.09-.55-.61-.2L6.12 12.7l-4.8-1.5c-1.04-.33-1.06-1.04.22-1.54L20.3 2.43c.87-.32 1.63.2 1.4.97Z"></path></svg>
+</a>
+<a aria-label="WhatsApp" class="social-btn whatsapp" href="https://chat.whatsapp.com/KbXl2Ljvhdb4NPAMPjZdh0?s=sh&amp;p=a&amp;mlu=4&amp;ilr=4" rel="noopener noreferrer" target="_blank" title="WhatsApp">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12.04 2a9.84 9.84 0 0 0-8.4 14.96L2 22l5.2-1.62A9.98 9.98 0 1 0 12.04 2Zm0 17.96a8.04 8.04 0 0 1-4.1-1.12l-.3-.18-3.08.96 1-3-.2-.31a7.96 7.96 0 1 1 6.68 3.65Zm4.42-5.96c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.12 3.63.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.43-.59 1.63-1.15.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"></path></svg>
+</a>
+<a aria-label="Instagram" class="social-btn instagram" href="https://instagram.com/ocinemadasgirls" rel="noopener noreferrer" target="_blank" title="Instagram">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.4 2h9.2A5.4 5.4 0 0 1 22 7.4v9.2a5.4 5.4 0 0 1-5.4 5.4H7.4A5.4 5.4 0 0 1 2 16.6V7.4A5.4 5.4 0 0 1 7.4 2Zm-.18 1.9A3.32 3.32 0 0 0 3.9 7.22v9.56a3.32 3.32 0 0 0 3.32 3.32h9.56a3.32 3.32 0 0 0 3.32-3.32V7.22a3.32 3.32 0 0 0-3.32-3.32H7.22Zm10.1 1.42a1.26 1.26 0 1 1 0 2.52 1.26 1.26 0 0 1 0-2.52ZM12 6.86A5.14 5.14 0 1 1 12 17.14 5.14 5.14 0 0 1 12 6.86Zm0 1.9A3.24 3.24 0 1 0 12 15.24 3.24 3.24 0 0 0 12 8.76Z"></path></svg>
+</a>
+</nav>
+</header>
+<section class="hero">
+<div class="hero-copy">
+<div class="eyebrow access-pill"><span aria-hidden="true" class="access-dot"></span><span>ACESSO LIBERADO</span></div>
+<h1>Bem-vinda ao seu<br/><em>Cinema da Barbie</em></h1>
+<p>Toda a coleção num lugar só, sem anúncios e sem complicação. Escolha o que você quer ver e clique para assistir — funciona no celular, tablet, computador e TV.</p>
+<div aria-label="Como assistir" class="steps">
+<span><b>1</b> Toque na capa</span>
+<span><b>2</b> Clique em assistir</span>
+<span><b>3</b> Boa sessão 💕</span>
+</div>
+</div>
+</section>
+<div class="search search-box">
+<svg aria-hidden="true" class="search-icon" viewbox="0 0 24 24">
+<path d="M10.5 4a6.5 6.5 0 1 0 4.03 11.6l4.43 4.44 1.08-1.08-4.44-4.43A6.5 6.5 0 0 0 10.5 4Zm0 1.5a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"></path>
+</svg>
+<input aria-label="Buscar filme" autocomplete="off" id="movieSearch" placeholder="Buscar por título..." type="search"/>
+<button aria-label="Limpar pesquisa" class="search-clear" id="searchClear" type="button">×</button>
+</div>
+<div class="search-empty" id="searchEmpty">Nenhum filme encontrado.</div>
+<section class="era" id="classicos">
+<div class="era-head"><div><h2 class="era-title">Clássicos dos anos 2000</h2><p class="era-sub">Os filmes que começaram a magia • em ordem de lançamento</p></div><span class="era-count">2001 — 2009</span></div>
+<div class="era-grid"><article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1i55rLVehlQCExOncCQL1XVTR_wf-dqoj/view?usp=drive_link" role="button" style="background-image:url('assets/img-004-7a22a0748130fc.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em O Quebra-Nozes</b><span>2001</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1hrkI3cDc95P8i2zqBZ_1DyrptvzUFLAH/view?usp=sharing" role="button" style="background-image:url('assets/img-005-6a2185876eb8f0.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie como Rapunzel</b><span>2002</span>
+</article>
+<article class="poster">
+<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1dRmmuVSxd4shErmnfvA_NFRWPdxstkKV/view?usp=drive_link" role="button" style="background-image:url('assets/img-006-6c9215fb709dcf.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em O Lago dos Cisnes</b><span>2003</span>
+</article>
+<article class="poster">
+<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1nrA88FQfkIMaHUc_-865m5MOgNUaXbUu/view?usp=drive_link" role="button" style="background-image:url('assets/img-007-9f0a178d1b139a.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em A Princesa e a Plebeia</b><span>2004</span>
+</article>
+<article class="poster">
+<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1rKaMu8E9mmXKNAesQVlPKyRdHWhBvfKu/view?usp=drive_link" role="button" style="background-image:url('assets/img-008-540246f506055e.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie Fairytopia</b><span>2005</span>
+</article>
+<article class="poster">
+<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1butFSW9Q9lxcCrT4eQHhuINB2MGLGIjf/view?usp=sharing" role="button" style="background-image:url('assets/img-009-83724db6c6cbaf.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e a Magia de Aladus</b><span>2005</span>
+</article>
+<article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1OPiv1G8vS7g166R6KcP6dSw_7uHmsNs8/view?usp=drive_link" role="button" style="background-image:url('assets/img-010-536cba021bed44.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie Fairytopia: Mermaidia</b><span>2006</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1dnEJ10vBF5Hj0A0z8Cq5y7Hv4lepEEcg/view?usp=drive_link" role="button" style="background-image:url('assets/img-011-6ef289e001d6e5.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Diário da Barbie</b><span>2006</span>
+</article>
+<article class="poster">
+<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1vp4Vy6Q8pegoSWG7k441WeK7l6Yltj5t/view?usp=drive_link" role="button" style="background-image:url('assets/img-012-8d081d01886d38.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em As 12 Princesas Bailarinas</b><span>2006</span>
+</article>
+<article class="poster">
+<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1Ru_7LlzyaZhOvX12GdEYKSP7Vnvb6ZsC/view?usp=drive_link" role="button" style="background-image:url('assets/img-013-ca1d45bdee5e8e.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie Fairytopia: A Magia do Arco-Íris</b><span>2007</span>
+</article>
+<article class="poster">
+<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1DTQuGHBd5KeYpUi9PblJfaU0z9nhV0kk/view?usp=drive_link" role="button" style="background-image:url('assets/img-014-12e4526d0cc190.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em A Princesa da Ilha</b><span>2007</span>
+</article>
+<article class="poster">
+<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1XpMtiihbOdCIIrWr9UY5Jk9Bbcw-SMpx/view?usp=drive_link" role="button" style="background-image:url('assets/img-015-e28d616acbcd16.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie Butterfly</b><span>2008</span>
+</article>
+<article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1i55rLVehlQCExOncCQL1XVTR_wf-dqoj/view?usp=drive_link" role="button" style="background-image:url('assets/img-016-d941b736e782c6.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e o Castelo de Diamante</b><span>2008</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/12OTFD3e1cCa657M0XuYpOAix2P2M-ECk/view?usp=drive_link" role="button" style="background-image:url('assets/img-017-b53a5e7c5a1fb1.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em A Canção de Natal</b><span>2008</span>
+</article>
+<article class="poster">
+<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1L6cgnXvtGZT5sBalCEYYunU89dAHpiRD/view?usp=drive_link" role="button" style="background-image:url('assets/img-018-61663e10924913.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em A Pequena Polegar</b><span>2009</span>
+</article>
+<article class="poster">
+<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1kuRd6NTVh47--igQ69SLibMoMBKVrdPZ/view?usp=drive_link" role="button" style="background-image:url('assets/img-019-ea5c8864e030bb.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e as Três Mosqueteiras</b><span>2009</span>
+</article></div>
+</section>
+<section aria-label="Barbie Life in the Dreamhouse" class="dreamhouse-inline-ad">
+<div class="dreamhouse-inline-ad__content">
+<img alt="Barbie Life in the Dreamhouse" class="dreamhouse-inline-ad__logo" src="assets/img-020-25a34b35530008.webp"/>
+<p class="dreamhouse-inline-ad__text">Libere também <strong>Barbie in the Dreamhouse</strong> por apenas <strong>R$ 4,50</strong></p>
+<div class="dreamhouse-inline-ad__meta">7 temporadas completas</div>
+<a class="dreamhouse-inline-ad__button" href="https://pay.lowify.com.br/checkout?product_id=UsauQM" rel="noopener noreferrer" target="_blank">DESBLOQUEAR DREAMHOUSE</a>
+</div>
+<div aria-hidden="true" class="dreamhouse-inline-ad__visual"></div>
+</section>
+<section class="era" id="mais-novos">
+<div class="era-head"><div><h2 class="era-title">Mais novos da Barbie</h2><p class="era-sub">Da nova fase às aventuras mais recentes • em ordem de lançamento</p></div><span class="era-count">2010 — 2025</span></div>
+<div class="era-grid"><article class="poster">
+<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/16K0rkrV9Xyn_DFASQj1arxcRNRnx_jYp/view?usp=drive_link" role="button" style="background-image:url('assets/img-021-25d58bacaf794b.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em Vida de Sereia</b><span>2010</span>
+</article>
+<article class="poster">
+<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1hIgUtqLWOJSpAIJ8n4UqQdEvUUxLdpjX/view?usp=drive_link" role="button" style="background-image:url('assets/img-022-9370e841c5edbc.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie Moda e Magia</b><span>2010</span>
+</article>
+<article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1YRhnanCrekB35nINvpr7nsHW8xh0IYck/view?usp=drive_link" role="button" style="background-image:url('assets/img-023-9a0a94fa2fd4b4.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e o Segredo das Fadas</b><span>2011</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/12Wpz5odLPJMLzVBstHTnPh1Yb3yhSxvS/view?usp=drive_link" role="button" style="background-image:url('assets/img-024-7ab2912a97f993.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Escola de Princesas</b><span>2011</span>
+</article>
+<article class="poster">
+<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/13GBeDe1NNUKZdb4bBatJGT-af3VmRx6Z/view?usp=drive_link" role="button" style="background-image:url('assets/img-025-6255b5ebe24712.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Um Natal Perfeito</b><span>2011</span>
+</article>
+<article class="poster">
+<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/16K0rkrV9Xyn_DFASQj1arxcRNRnx_jYp/view?usp=drive_link" role="button" style="background-image:url('assets/img-026-677d47b5f7cd44.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em Vida de Sereia 2</b><span>2012</span>
+</article>
+<article class="poster">
+<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1PpqJJ_7E3BctW9nkugbmK6HGma951m70/view?usp=drive_link" role="button" style="background-image:url('assets/img-027-7e6aa8ab587264.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: A Princesa e a Popstar</b><span>2012</span>
+</article>
+<article class="poster">
+<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1bFGJ2VslpOSMiYNTRKo-9Fof7rJTkSl0/view?usp=drive_link" role="button" style="background-image:url('assets/img-028-31fd01580c57f4.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e as Sapatilhas Mágicas</b><span>2013</span>
+</article>
+<article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1YPa9EteDYjFkJWYJO_eUHuOJv7DG7oxK/view?usp=drive_link" role="button" style="background-image:url('assets/img-029-dfbfbd3864e198.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie Butterfly e a Princesa Fairy</b><span>2013</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1nFKUOeKV8RyGAzoQAM3oyCUKTUqtwtcx/view?usp=drive_link" role="button" style="background-image:url('assets/img-030-a0773c888b4cae.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e Suas Irmãs em Uma Aventura de Cavalos</b><span>2013</span>
+</article>
+<article class="poster">
+<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1PmNEtgtcGv3hFpk4wm9p5MaFamR1n2T5/view?usp=drive_link" role="button" style="background-image:url('assets/img-031-937d0bda41fa94.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: A Princesa das Pérolas</b><span>2014</span>
+</article>
+<article class="poster">
+<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1-QN--Top7Bf92XuSzAGwTQYVnp4t8e0R/view?usp=drive_link" role="button" style="background-image:url('assets/img-032-3764dbbe79018f.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e o Portal Secreto</b><span>2014</span>
+</article>
+<article class="poster">
+<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1QUN7rLS96cTdpie-MJS2WKZ1bD3ZH9xC/view?usp=drive_link" role="button" style="background-image:url('assets/img-033-b63f44d36fdf9c.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie Super Princesa</b><span>2015</span>
+</article>
+<article class="poster">
+<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1zGQ1nBH7adq1_VwlQUV0iMpUeTpH1oUe/view?usp=drive_link" role="button" style="background-image:url('assets/img-034-74f442ed5a5ec2.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Rock 'N Royals</b><span>2015</span>
+</article>
+<article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1Frb28z_kosU0yvwo7zTNQNOkhI8lkOv0/view?usp=drive_link" role="button" style="background-image:url('assets/img-035-ab0939e1af6e6a.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e Suas Irmãs em Uma Aventura de Cachorrinhos</b><span>2015</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1m6jIEGkJYHARzuyhec83DCvkzTfS16Cu/view?usp=drive_link" role="button" style="background-image:url('assets/img-036-572f2bf669f66a.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e as Agentes Secretas</b><span>2016</span>
+</article>
+<article class="poster">
+<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1Aq__QyuMXBoUUW0MV1TKAlN3Men1W3Yo/view?usp=drive_link" role="button" style="background-image:url('assets/img-037-92af7212188a99.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Aventura nas Estrelas</b><span>2016</span>
+</article>
+<article class="poster">
+<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1jjjeSKe8saWIdb3RFHmjgb9jAv6WaKbz/view?usp=drive_link" role="button" style="background-image:url('assets/img-038-c2ed5f4d87a2c5.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e Suas Irmãs em Busca dos Cachorrinhos</b><span>2016</span>
+</article>
+<article class="poster">
+<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/10EJ5lrBT_NnPfjSWWCE4TJxuxd1KDQuC/view?usp=drive_link" role="button" style="background-image:url('assets/img-039-c23f321e91e3c6.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie em um Mundo de Videogame</b><span>2017</span>
+</article>
+<article class="poster">
+<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1LgDPhFF_EjEDtgmiNbufLSoQ69sgVNAN/view?usp=sharing" role="button" style="background-image:url('assets/img-040-80bcd4b1d66fbd.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Magia dos Golfinhos</b><span>2017</span>
+</article>
+<article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1RXlqAT0nyDOkn_HSyRRbIPKNrSb8VR7m/view?usp=drive_link" role="button" style="background-image:url('assets/img-041-7ea1afbe6a035a.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Aventura de Princesa</b><span>2020</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1HfxLZui8H79vqePnwDVTxKTWpDaIdQ3C/view?usp=drive_link" role="button" style="background-image:url('assets/img-042-489f5b1ebb1aa9.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie &amp; Chelsea: O Aniversário Perdido</b><span>2021</span>
+</article>
+<article class="poster">
+<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1xPlRDS_GcCNxOUgbCQio_JPen1-uHJoQ/view?usp=drive_link" role="button" style="background-image:url('assets/img-043-3f0cbe24577328.jpg');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Cidade Grande, Grandes Sonhos</b><span>2021</span>
+</article>
+<article class="poster">
+<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1zlcEX5s1YuTf3KZxXd5h5V1UT1aeIVSK/view?usp=drive_link" role="button" style="background-image:url('assets/img-044-d4a5941d6ccf9d.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Poder de Sereia</b><span>2022</span>
+</article>
+<article class="poster">
+<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1jAWd52XL7C-ExPCTYOHlr_7sP-RU-2vA/view?usp=drive_link" role="button" style="background-image:url('assets/img-045-c39fbae029f457.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie: Epic Road Trip</b><span>2022</span>
+</article>
+<article class="poster">
+<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1vuYmQ1NRTQOLJp6LLJJHeZQPKId6_Pun/view?usp=drive_link" role="button" style="background-image:url('assets/img-046-e02c44c9cc1d6c.jpg');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e Skipper e a Grande Aventura de Babás</b><span>2023</span>
+</article>
+<article class="poster">
+<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1CNz3vpRgGvERRn3bGndZ_Vx_SreGoS2u/view?usp=drive_link" role="button" style="background-image:url('assets/img-047-194f3119c2fcb9.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie e Stacie ao Resgate</b><span>2024</span>
+</article>
+<article class="poster">
+<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1uaRKpbpjjQyQaGOjwoGX1vk_R2p0Yclo/view?usp=drive_link" role="button" style="background-image:url('assets/img-048-9dbbdbb3bb1452.webp');background-size:cover;background-position:center;" tabindex="0">
+</div>
+<b>Barbie &amp; Teresa: Receita para Amizade</b><span>2025</span>
+</article>
+<article class="poster dreamhouse-catalog-card">
+<div class="cover dreamhouse-catalog-cover" role="button" tabindex="0" aria-label="Desbloquear Barbie in the Dreamhouse" style="position:relative;overflow:hidden;cursor:pointer;">
+<img src="assets/img-049-8edf69cb12973d.jpg" alt="Barbie in the Dreamhouse" style="width:100%;height:100%;object-fit:cover;display:block;filter:blur(4px) brightness(.72);transform:scale(1.035);pointer-events:none;">
+<span class="dreamhouse-catalog-lock" aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:42px;pointer-events:none;">&#128274;</span>
+</div>
+<b>Barbie in the Dreamhouse</b><span>DESBLOQUEAR</span>
+</article></div>
+</section>
+<section class="dreamhouse-access" id="dreamhouseAccess" aria-label="Barbie Life in the Dreamhouse">
+  
+  <div class="dreamhouse-seasons" id="dreamhouseSeasons" hidden>
+    <div class="dreamhouse-season-head"><div><h2>Barbie Life in the Dreamhouse</h2><p>7 temporadas • escolha uma temporada para assistir</p></div></div>
+    <div class="dreamhouse-season-grid">
+      <article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/11A0m00ADKQNSDtShN6sgNfnNXQm8lo99/view?usp=drive_link" data-season="1" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-050-4b2a8abf2f05aa.jpg" alt="Temporada 1"><span class="season-overlay">TEMPORADA 1</span></div><b>Temporada 1</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1_PNY5iiKr-iAjARoF6yOhjTsnLx-Qp-3/view?usp=drive_link" data-season="2" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-051-47ca45a4c10503.webp" alt="Temporada 2"><span class="season-overlay">TEMPORADA 2</span></div><b>Temporada 2</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1Z6Jg4_NEW9wpYgg3LcqcBqUjNNPPGG4S/view?usp=drive_link" data-season="3" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-052-592ea2f723d995.webp" alt="Temporada 3"><span class="season-overlay">TEMPORADA 3</span></div><b>Temporada 3</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1SpeFr0sLFsaLKYKpp1re6LQJlN640KVy/view?usp=drive_link" data-season="4" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-053-21bf77b1070bb4.jpg" alt="Temporada 4"><span class="season-overlay">TEMPORADA 4</span></div><b>Temporada 4</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1Z--EZYQsEzIdy4ocfdmH6VFUxnFvLarK/view?usp=drive_link" data-season="5" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-054-ead7adb3dd85cf.jpg" alt="Temporada 5"><span class="season-overlay">TEMPORADA 5</span></div><b>Temporada 5</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1Obtr2hYErFVuUhSEyEn6SgqFthzA4C86/view?usp=drive_link" data-season="6" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-055-ea7c156a91f7d2.webp" alt="Temporada 6"><span class="season-overlay">TEMPORADA 6</span></div><b>Temporada 6</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1CqpHCT972g2nd06C5oByDUTz-YZ131Nj/view?usp=drive_link" data-season="7" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-056-cc60475fe55d69.jpg" alt="Temporada 7"><span class="season-overlay">TEMPORADA 7</span></div><b>Temporada 7</b></article>
+    </div>
+  </div>
+</section>
+<section class="locked-franchises">
+<div class="locked-franchises-head">
+<div>
+<h2>Mais conteúdos para desbloquear</h2>
+<p>Outros cinemas disponíveis.</p>
+</div>
+</div>
+<div class="locked-franchises-grid">
+<a class="franchise-locked franchise-link" href="https://pay.lowify.com.br/checkout?product_id=GtelUn" rel="noopener noreferrer" target="_blank">
+<div class="franchise-cover" style="background-image:url('assets/img-057-31a1a27eac7fbe.webp');background-size:cover;background-position:center;background-repeat:no-repeat;">
+<span aria-label="Bloqueado" class="lock-badge">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V6Zm3 10.73V18h-2v-1.27a2 2 0 1 1 2 0Z"></path></svg>
+</span>
+<div class="franchise-name">Disney</div>
+</div>
+<b>Disney</b>
+<span>Conteúdo bloqueado</span>
+</a>
+<a class="franchise-locked franchise-link" href="https://pay.lowify.com.br/checkout?product_id=bloEBS" rel="noopener noreferrer" target="_blank">
+<div class="franchise-cover" style="background-image:url('assets/img-058-d5b61c4b61d224.webp');background-size:cover;background-position:center;">
+<span aria-label="Bloqueado" class="lock-badge">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V6Zm3 10.73V18h-2v-1.27a2 2 0 1 1 2 0Z"></path></svg>
+</span>
+<div class="franchise-name">Monster High</div>
+</div>
+<b>Monster High</b>
+<span>Conteúdo bloqueado</span>
+</a>
+<a class="franchise-locked franchise-link" href="https://pay.lowify.com.br/checkout?product_id=dH3uEo" rel="noopener noreferrer" target="_blank">
+<div class="franchise-cover" style="background-image:url('assets/img-059-b933c4661b0551.webp');background-size:cover;background-position:center;">
+<span aria-label="Bloqueado" class="lock-badge">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V6Zm3 10.73V18h-2v-1.27a2 2 0 1 1 2 0Z"></path></svg>
+</span>
+<div class="franchise-name">Moranguinho</div>
+</div>
+<b>Moranguinho</b>
+<span>Conteúdo bloqueado</span>
+</a>
+<a class="franchise-locked franchise-link" href="https://pay.lowify.com.br/checkout?product_id=QeihRQ" rel="noopener noreferrer" target="_blank">
+<div class="franchise-cover" style="background-image:url('assets/img-060-96b3d2b7648f56.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;">
+<span aria-label="Bloqueado" class="lock-badge">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V6Zm3 10.73V18h-2v-1.27a2 2 0 1 1 2 0Z"></path></svg>
+</span>
+<div class="franchise-name">Miraculous - As Aventuras de Ladybug e Cat Noir</div>
+</div>
+<b>Miraculous - As Aventuras de Ladybug e Cat Noir</b>
+<span>Conteúdo bloqueado</span>
+</a>
+<a class="franchise-locked franchise-link" href="https://pay.lowify.com.br/checkout?product_id=zVcWH6" rel="noopener noreferrer" target="_blank">
+<div class="franchise-cover" style="background-image:url('assets/img-061-a57e2200528dab.webp');background-size:cover;background-position:center;background-repeat:no-repeat;">
+<span aria-label="Bloqueado" class="lock-badge">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V6Zm3 10.73V18h-2v-1.27a2 2 0 1 1 2 0Z"></path></svg>
+</span>
+<div class="franchise-name">Três Espiãs Demais!</div>
+</div>
+<b>Três Espiãs Demais!</b>
+<span>Conteúdo bloqueado</span>
+</a>
+<a class="franchise-locked franchise-link" href="https://pay.lowify.com.br/checkout?product_id=v00kB1" rel="noopener noreferrer" target="_blank">
+<div class="franchise-cover" style="background-image:url('assets/img-062-3cbd5b134fb15b.webp');background-size:cover;background-position:center;">
+<span aria-label="Bloqueado" class="lock-badge">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V6Zm3 10.73V18h-2v-1.27a2 2 0 1 1 2 0Z"></path></svg>
+</span>
+<div class="franchise-name">Clube das Winx</div>
+</div>
+<b>Clube das Winx</b>
+<span>Conteúdo bloqueado</span>
+</a>
+</div>
+</section>
+
+</main>
+<div aria-hidden="true" class="movie-modal" id="movieModal" onclick="if(event.target===this)closeMoviePlayer()">
+<div aria-labelledby="movieModalTitle" aria-modal="true" class="movie-dialog" role="dialog">
+<button aria-label="Fechar" class="movie-close" onclick="closeMoviePlayer()" type="button">×</button>
+<div class="movie-modal-title" id="movieModalTitle">BARBIE • FILME</div>
+<iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" class="drive-player" id="drivePlayer" referrerpolicy="strict-origin-when-cross-origin" src="about:blank" webkitallowfullscreen=""></iframe>
+<a class="telegram-player-btn" href="https://t.me/+f6oQa4lSD4U2ZGU5" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21.7 3.4 18.5 19c-.24 1.1-.88 1.37-1.78.85l-4.88-3.6-2.35 2.27c-.26.26-.48.48-.98.48l.35-4.97 9.04-8.17c.39-.35-.09-.55-.61-.2L6.12 12.7l-4.8-1.5c-1.04-.33-1.06-1.04.22-1.54L20.3 2.43c.87-.32 1.63.2 1.4.97Z"></path></svg>
+      Entrar no Canal do Telegram
+    </a>
+<p class="modal-hint">Toque fora ou pressione Esc para fechar</p>
+</div>
+</div>
+<script>
+function drivePreviewUrl(url){
+  if(!url) return "";
+  url = String(url).trim().replace(/^https:\/\/\s+/,"https://");
+  var m = url.match(/\/file\/d\/([^/]+)/);
+  if(m) return "https://drive.google.com/file/d/" + m[1] + "/preview";
+  var id = url.match(/[?&]id=([^&]+)/);
+  if(id) return "https://drive.google.com/file/d/" + id[1] + "/preview";
+  return url;
+}
+
+function openMoviePlayer(el){
+  if(!el) return;
+  var drive = el.getAttribute("data-drive") || "";
+  if(!drive.trim()) return;
+
+  var modal = document.getElementById("movieModal");
+  var iframe = document.getElementById("drivePlayer");
+  if(!modal || !iframe) return;
+
+  var poster = el.closest(".poster");
+  var title = poster ? poster.querySelector("b") : null;
+  var year = poster ? poster.querySelector("span") : null;
+  var titleEl = document.getElementById("movieModalTitle");
+  if(titleEl){
+    titleEl.textContent = (title ? title.textContent : "BARBIE") + (year ? " • " + year.textContent : "");
+  }
+
+  iframe.src = drivePreviewUrl(drive);
+  var telegramBtn = modal.querySelector(".telegram-player-btn");
+  if(telegramBtn){
+    telegramBtn.href = poster && poster.classList.contains("dreamhouse-season-card")
+      ? "https://t.me/+Aucu2xH5YVE5ZjUx"
+      : "https://t.me/+f6oQa4lSD4U2ZGU5";
+  }
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden","false");
+  document.documentElement.style.overflow="hidden";
+  document.body.style.overflow="hidden";
+}
+
+function closeMoviePlayer(){
+  var modal = document.getElementById("movieModal");
+  var iframe = document.getElementById("drivePlayer");
+  if(iframe) iframe.src="about:blank";
+  if(modal){
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden","true");
+  }
+  document.documentElement.style.overflow="";
+  document.body.style.overflow="";
+}
+
+function bindMoviePlayers_OLD_DISABLED(){
+  document.querySelectorAll(".poster-click").forEach(function(el){
+    el.style.cursor="pointer";
+    el.style.touchAction="manipulation";
+    el.addEventListener("click", function(e){
+      e.preventDefault();
+      openMoviePlayer(el);
+    }, false);
+    el.addEventListener("keydown", function(e){
+      if(e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        openMoviePlayer(el);
+      }
+    }, false);
+  });
+}
+
+if(document.readyState === "loading"){
+  document.addEventListener("DOMContentLoaded", function(){}, {once:true});
+}else{
+  /* old binder disabled */
+}
+
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape") closeMoviePlayer();
+});
+</script>
+<script>
+(function(){
+  const input = document.getElementById('movieSearch');
+  const clear = document.getElementById('searchClear');
+  const empty = document.getElementById('searchEmpty');
+  if(!input) return;
+
+  function normalizeText(value){
+    return (value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g,'')
+      .toLowerCase()
+      .trim();
+  }
+
+  function runSearch(){
+    const query = normalizeText(input.value);
+    let visibleTotal = 0;
+
+    document.querySelectorAll('.era').forEach(era => {
+      let visibleInEra = 0;
+      era.querySelectorAll('.poster').forEach(card => {
+        const titleEl = card.querySelector('b');
+        const yearEl = card.querySelector('span');
+        const searchable = normalizeText(
+          (titleEl ? titleEl.textContent : '') + ' ' +
+          (yearEl ? yearEl.textContent : '')
+        );
+        const match = !query || searchable.includes(query);
+        card.classList.toggle('search-hidden', !match);
+        if(match){
+          visibleInEra++;
+          visibleTotal++;
+        }
+      });
+      era.classList.toggle('search-hidden', query && visibleInEra === 0);
+    });
+
+    clear.classList.toggle('show', input.value.length > 0);
+    empty.classList.toggle('show', !!query && visibleTotal === 0);
+  }
+
+  input.addEventListener('input', runSearch);
+  clear.addEventListener('click', function(){
+    input.value = '';
+    runSearch();
+    input.focus();
+  });
+})();
+</script>
+<footer style="width:100%;max-width:1400px;margin:28px auto 0;padding:0 24px 22px;text-align:right;font-size:12px;color:rgba(90,45,70,.62);box-sizing:border-box;">©2026 Cinema da Barbie.</footer>
+
+<div class="dreamhouse-code-modal" id="dreamhouseCodeModal" aria-hidden="true" onclick="if(event.target===this)closeDreamhouseCode()"><div class="dreamhouse-code-box"><h3>Desbloquear Dreamhouse</h3><p>Digite seu código de acesso para liberar as 7 temporadas.</p><input class="dreamhouse-code-input" id="dreamhouseCodeInput" type="text" autocomplete="off" autocapitalize="characters" placeholder="CÓDIGO DE ACESSO"><button class="dreamhouse-code-submit" type="button" onclick="checkDreamhouseCode()">LIBERAR ACESSO</button><p class="dreamhouse-code-error" id="dreamhouseCodeError"></p><button class="dreamhouse-code-close" type="button" onclick="closeDreamhouseCode()">Fechar</button></div></div>
+<script id="dreamhouse-code-script">
+function openDreamhouseCode(){
+  var seasons=document.getElementById('dreamhouseSeasons');
+  var m=document.getElementById('dreamhouseCodeModal');
+  if(!m)return;
+  m.classList.add('open');m.setAttribute('aria-hidden','false');
+  setTimeout(function(){var input=document.getElementById('dreamhouseCodeInput');if(input)input.focus()},80)
+}
+function closeDreamhouseCode(){var m=document.getElementById('dreamhouseCodeModal');if(!m)return;m.classList.remove('open');m.setAttribute('aria-hidden','true');var e=document.getElementById('dreamhouseCodeError');if(e)e.textContent=''}
+function unlockDreamhouse(shouldScroll){
+  var s=document.getElementById('dreamhouseSeasons'),c=document.querySelector('.dreamhouse-catalog-card');
+  if(s){s.hidden=false;s.style.display='block';}
+  if(c){
+    c.classList.add('dreamhouse-unlocked');
+    var lock=c.querySelector('.dreamhouse-catalog-lock');if(lock)lock.style.display='none';
+    var meta=c.querySelector('span:not(.dreamhouse-catalog-lock)');if(meta)meta.textContent='DESBLOQUEAR';
+  }
+  if(shouldScroll!==false && s){setTimeout(function(){s.scrollIntoView({behavior:'smooth',block:'start'})},180)}
+}
+function checkDreamhouseCode(){
+  var i=document.getElementById('dreamhouseCodeInput'),e=document.getElementById('dreamhouseCodeError');
+  if(!i)return;
+  if(i.value.trim().toUpperCase()==='DREAMHOUSE5962'){
+    closeDreamhouseCode();
+    unlockDreamhouse(true);
+  }else if(e){e.textContent='Código inválido. Confira e tente novamente.'}
+}
+function openDreamhouseSeason(el){var url=el.getAttribute('data-drive')||'';if(!url){alert('O player desta temporada será liberado em breve.');return}if(typeof openMoviePlayer==='function')openMoviePlayer(el)}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDreamhouseCode();if(e.key==='Enter'&&(document.getElementById('dreamhouseCodeModal') && document.getElementById('dreamhouseCodeModal').classList.contains('open')))checkDreamhouseCode()});
+document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('dreamhouseSeasons');if(s)s.hidden=true;var c=document.querySelector('.dreamhouse-catalog-card');if(c)c.classList.remove('dreamhouse-unlocked');var lock=c&&c.querySelector('.dreamhouse-catalog-lock');if(lock)lock.style.display='';});
+</script>
+
+<style id="ios-player-hotfix-v32">
+.dreamhouse-code-modal{z-index:2147483000!important}.movie-modal{z-index:2147482000!important}
+.poster-click,.dreamhouse-catalog-cover{touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important}
+@media(max-width:520px){.movie-dialog{width:calc(100vw - 24px)!important;max-width:calc(100vw - 24px)!important;overflow:hidden!important}.drive-player{width:100%!important;height:auto!important;aspect-ratio:16/9!important;display:block!important}}
+</style>
+
+<script id="universal-player-v33">
+(function(){
+  function closest(el, selector){
+    if(!el) return null;
+    if(el.closest) return el.closest(selector);
+    while(el && el !== document){
+      if(el.matches && el.matches(selector)) return el;
+      el = el.parentElement;
+    }
+    return null;
+  }
+
+  function showMovie(el){
+    var drive = el && el.getAttribute('data-drive');
+    if(!drive || !drive.trim()) return;
+    var modal=document.getElementById('movieModal');
+    var iframe=document.getElementById('drivePlayer');
+    if(!modal || !iframe) return;
+    var poster=closest(el,'.poster');
+    var title=poster ? poster.querySelector('b') : null;
+    var year=poster ? poster.querySelector('span') : null;
+    var titleEl=document.getElementById('movieModalTitle');
+    if(titleEl) titleEl.textContent=(title?title.textContent:'BARBIE')+(year?' • '+year.textContent:'');
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    document.body.style.overflow='hidden';
+    var preview=drivePreviewUrl(drive);
+    requestAnimationFrame(function(){ iframe.src=preview; });
+  }
+
+  document.addEventListener('click',function(e){
+    var dh=closest(e.target,'.dreamhouse-catalog-cover');
+    if(dh){
+      e.preventDefault();
+      if(typeof openDreamhouseCode==='function') openDreamhouseCode();
+      return;
+    }
+    var el=closest(e.target,'.poster-click');
+    if(!el) return;
+    e.preventDefault();
+    if(el.hasAttribute('data-season')){
+      var d=el.getAttribute('data-drive')||'';
+      if(!d.trim()){ alert('O player desta temporada será liberado em breve.'); return; }
+    }
+    showMovie(el);
+  },false);
+
+  document.addEventListener('keydown',function(e){
+    var el=closest(e.target,'.poster-click');
+    if(el && (e.key==='Enter' || e.key===' ')){
+      e.preventDefault(); showMovie(el);
+    }
+  },false);
+
+  window.openMoviePlayer=showMovie;
+})();
+</script>\n
+
+</body></html>
