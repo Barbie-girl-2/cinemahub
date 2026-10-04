@@ -1157,208 +1157,8 @@ document.addEventListener('DOMContentLoaded',function(){
 }
 </style>
 
-
-<style id="maintenance-popup-v1">
-/* ===== AVISO TEMPORÁRIO DE MANUTENÇÃO ===== */
-#maintenancePopup{
-  position:fixed;
-  inset:0;
-  z-index:2147483500;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:18px;
-  background:rgba(73,12,46,.68);
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-}
-html.access-granted #maintenancePopup{
-  display:flex;
-}
-#maintenancePopup.is-hidden{
-  display:none!important;
-}
-.maintenance-popup-card{
-  position:relative;
-  width:min(92vw,560px);
-  max-height:92vh;
-  border-radius:26px;
-  overflow:visible;
-  box-shadow:0 25px 70px rgba(90,15,55,.34);
-}
-.maintenance-image-wrap{
-  position:relative;
-  line-height:0;
-  border-radius:26px;
-  overflow:hidden;
-}
-.maintenance-popup-image{
-  display:block;
-  width:100%;
-  height:auto;
-  max-height:88vh;
-  object-fit:contain;
-}
-.maintenance-close{
-  position:absolute;
-  top:12px;
-  right:12px;
-  z-index:50;
-  width:46px;
-  height:46px;
-  border:0;
-  border-radius:50%;
-  background:#ffffff;
-  color:#d91d73;
-  font:700 31px/1 Arial,sans-serif;
-  cursor:pointer;
-  display:grid;
-  place-items:center;
-  box-shadow:0 8px 24px rgba(0,0,0,.28);
-  -webkit-tap-highlight-color:transparent;
-}
-.maintenance-close:active{
-  transform:scale(.96);
-}
-.maintenance-telegram-link{
-  position:absolute;
-  left:14%;
-  bottom:5.2%;
-  width:72%;
-  height:9%;
-  border-radius:999px;
-  cursor:pointer;
-  z-index:10;
-  -webkit-tap-highlight-color:transparent;
-}
-.maintenance-telegram-link:active{
-  transform:scale(.98);
-}
-@media(max-width:600px){
-  #maintenancePopup{padding:12px}
-  .maintenance-popup-card{width:min(94vw,520px)}
-  .maintenance-close{
-    top:10px;
-    right:10px;
-    width:42px;
-    height:42px;
-    font-size:28px;
-  }
-}
-</style>
-
 </head>
 <body>
-
-<!-- ===== POP-UP TEMPORÁRIO DE MANUTENÇÃO ===== -->
-<div id="maintenancePopup" aria-label="Aviso de manutenção">
-  <div class="maintenance-popup-card">
-    <button
-      class="maintenance-close"
-      type="button"
-      aria-label="Fechar aviso"
-      onclick="document.getElementById('maintenancePopup').classList.add('is-hidden')"
-    >×</button>
-
-    <div class="maintenance-image-wrap">
-      <img
-        src="assets/aviso-manutencao.png"
-        alt="Aviso de manutenção do Cinema da Barbie"
-        class="maintenance-popup-image"
-      >
-
-      <a
-        href="https://t.me/+YeQTVIMy9vBiMmYx"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="maintenance-telegram-link"
-        aria-label="Entrar em nosso canal no Telegram"
-      ></a>
-    </div>
-  </div>
-</div>
-<!-- ===== FIM DO POP-UP ===== -->
-
-  <div id="maintenanceNotice">
-
-  <div class="maintenance-card">
-
-    <img
-      src="assets/aviso-manutencao.png"
-      alt="Aviso de manutenção"
-      class="maintenance-image"
-    >
-
-    <a
-      href="https://t.me/+YeQTVIMy9vBiMmYx"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="maintenance-telegram"
-      aria-label="Entrar em nosso canal no Telegram"
-    ></a>
-
-  </div>
-
-</div>
-
-<style>
-  #maintenanceNotice{
-    position:fixed;
-    inset:0;
-    z-index:2147483647;
-    background:#ffd9e7;
-
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-
-    overflow-y:auto;
-    padding:0;
-  }
-
-  .maintenance-card{
-    position:relative;
-
-    width:100%;
-    max-width:700px;
-
-    margin:0 auto;
-
-    line-height:0;
-  }
-
-  .maintenance-image{
-    display:block;
-
-    width:100%;
-    height:auto;
-  }
-
-  .maintenance-telegram{
-    position:absolute;
-
-    left:14%;
-    bottom:5.2%;
-
-    width:72%;
-    height:9%;
-
-    border-radius:999px;
-
-    cursor:pointer;
-    z-index:10;
-  }
-
-  .maintenance-telegram:active{
-    transform:scale(.98);
-  }
-
-  @media(max-width:600px){
-    .maintenance-card{
-      max-width:100%;
-    }
-  }
-</style>
 <div id="exclusiveLoginBackdrop" style="display:flex" role="dialog" aria-modal="true" aria-labelledby="exclusiveLoginTitle">
   <div class="exclusive-login-card">
     <div class="exclusive-lock-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.5 10V7.5a4.5 4.5 0 0 1 9 0V10" stroke="#e7337e" stroke-width="2.2" stroke-linecap="round"/><rect x="5" y="10" width="14" height="11" rx="3" fill="#e7337e"/><circle cx="12" cy="15.2" r="1.5" fill="white"/><path d="M12 16.5V18" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
@@ -1418,82 +1218,82 @@ html.access-granted #maintenancePopup{
 <section class="era" id="classicos">
 <div class="era-head"><div><h2 class="era-title">Clássicos dos anos 2000</h2><p class="era-sub">Os filmes que começaram a magia • em ordem de lançamento</p></div><span class="era-count">2001 — 2009</span></div>
 <div class="era-grid"><article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1i55rLVehlQCExOncCQL1XVTR_wf-dqoj/view?usp=drive_link" role="button" style="background-image:url('assets/img-008-61dcc170a782.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/789490" role="button" style="background-image:url('assets/img-008-61dcc170a782.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em O Quebra-Nozes</b><span>2001</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1utKKAjsqwOP8SjzUVY8eh_aMQzR_Cavi/view?usp=drive_link" role="button" style="background-image:url('assets/img-009-a54fa0e0d763.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/815621" role="button" style="background-image:url('assets/img-009-a54fa0e0d763.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie como Rapunzel</b><span>2002</span>
 </article>
 <article class="poster">
-<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1xPBCISMTLARu5V1UTrFEKwnOOHOg_pKX/view?usp=drive_link" role="button" style="background-image:url('assets/img-010-515c90a5369e.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c3 poster-click" data-drive="https://www.tokyvideo.com/br/embed/631836" role="button" style="background-image:url('assets/img-010-515c90a5369e.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em O Lago dos Cisnes</b><span>2003</span>
 </article>
 <article class="poster">
-<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1nrA88FQfkIMaHUc_-865m5MOgNUaXbUu/view?usp=drive_link" role="button" style="background-image:url('assets/img-011-39add66fd87e.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c4 poster-click" data-drive="https://www.tokyvideo.com/br/embed/764457" role="button" style="background-image:url('assets/img-011-39add66fd87e.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em A Princesa e a Plebeia</b><span>2004</span>
 </article>
 <article class="poster">
-<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/17ceJ0bICP_fBPHo4HXcU5ZverzFloa3D/view?usp=drive_link" role="button" style="background-image:url('assets/img-012-717b59c18c88.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c5 poster-click" data-drive="https://www.tokyvideo.com/br/embed/863805" role="button" style="background-image:url('assets/img-012-717b59c18c88.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie Fairytopia</b><span>2005</span>
 </article>
 <article class="poster">
-<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1butFSW9Q9lxcCrT4eQHhuINB2MGLGIjf/view?usp=sharing" role="button" style="background-image:url('assets/img-013-738a8c360692.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c6 poster-click" data-drive="https://www.tokyvideo.com/br/embed/764552" role="button" style="background-image:url('assets/img-013-738a8c360692.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e a Magia de Aladus</b><span>2005</span>
 </article>
 <article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1OPiv1G8vS7g166R6KcP6dSw_7uHmsNs8/view?usp=drive_link" role="button" style="background-image:url('assets/img-014-caa01fbe5b74.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/508697" role="button" style="background-image:url('assets/img-014-caa01fbe5b74.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie Fairytopia: Mermaidia</b><span>2006</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1dnEJ10vBF5Hj0A0z8Cq5y7Hv4lepEEcg/view?usp=drive_link" role="button" style="background-image:url('assets/img-015-cbc1ffadbd19.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/863807" role="button" style="background-image:url('assets/img-015-cbc1ffadbd19.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Diário da Barbie</b><span>2006</span>
 </article>
 <article class="poster">
-<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1vp4Vy6Q8pegoSWG7k441WeK7l6Yltj5t/view?usp=drive_link" role="button" style="background-image:url('assets/img-016-509bdc5dc6e0.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c3 poster-click" data-drive="https://www.tokyvideo.com/br/embed/632352" role="button" style="background-image:url('assets/img-016-509bdc5dc6e0.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em As 12 Princesas Bailarinas</b><span>2006</span>
 </article>
 <article class="poster">
-<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1Ru_7LlzyaZhOvX12GdEYKSP7Vnvb6ZsC/view?usp=drive_link" role="button" style="background-image:url('assets/img-017-ec5b9b8ebf52.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c4 poster-click" data-drive="https://www.tokyvideo.com/br/embed/508701" role="button" style="background-image:url('assets/img-017-ec5b9b8ebf52.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie Fairytopia: A Magia do Arco-Íris</b><span>2007</span>
 </article>
 <article class="poster">
-<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1DTQuGHBd5KeYpUi9PblJfaU0z9nhV0kk/view?usp=drive_link" role="button" style="background-image:url('assets/img-018-303f71258b2b.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c5 poster-click" data-drive="https://www.tokyvideo.com/br/embed/630259" role="button" style="background-image:url('assets/img-018-303f71258b2b.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em A Princesa da Ilha</b><span>2007</span>
 </article>
 <article class="poster">
-<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1XpMtiihbOdCIIrWr9UY5Jk9Bbcw-SMpx/view?usp=drive_link" role="button" style="background-image:url('assets/img-019-5642e1ac329f.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c6 poster-click" data-drive="https://www.tokyvideo.com/br/embed/764386" role="button" style="background-image:url('assets/img-019-5642e1ac329f.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie Butterfly</b><span>2008</span>
 </article>
 <article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1i55rLVehlQCExOncCQL1XVTR_wf-dqoj/view?usp=drive_link" role="button" style="background-image:url('assets/img-020-5f7462f29328.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/633331" role="button" style="background-image:url('assets/img-020-5f7462f29328.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e o Castelo de Diamante</b><span>2008</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/12OTFD3e1cCa657M0XuYpOAix2P2M-ECk/view?usp=drive_link" role="button" style="background-image:url('assets/img-021-4b1d0eca2b2c.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/630518" role="button" style="background-image:url('assets/img-021-4b1d0eca2b2c.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em A Canção de Natal</b><span>2008</span>
 </article>
 <article class="poster">
-<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1L6cgnXvtGZT5sBalCEYYunU89dAHpiRD/view?usp=drive_link" role="button" style="background-image:url('assets/img-022-ea3239c19958.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c3 poster-click" data-drive="https://www.tokyvideo.com/br/embed/513923" role="button" style="background-image:url('assets/img-022-ea3239c19958.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em A Pequena Polegar</b><span>2009</span>
 </article>
 <article class="poster">
-<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1kuRd6NTVh47--igQ69SLibMoMBKVrdPZ/view?usp=drive_link" role="button" style="background-image:url('assets/img-023-844149b18c6f.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c4 poster-click" data-drive="https://www.tokyvideo.com/br/embed/508724" role="button" style="background-image:url('assets/img-023-844149b18c6f.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e as Três Mosqueteiras</b><span>2009</span>
 </article></div>
@@ -1510,142 +1310,142 @@ html.access-granted #maintenancePopup{
 <section class="era" id="mais-novos">
 <div class="era-head"><div><h2 class="era-title">Mais novos da Barbie</h2><p class="era-sub">Da nova fase às aventuras mais recentes • em ordem de lançamento</p></div><span class="era-count">2010 — 2025</span></div>
 <div class="era-grid"><article class="poster">
-<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/16K0rkrV9Xyn_DFASQj1arxcRNRnx_jYp/view?usp=drive_link" role="button" style="background-image:url('assets/img-025-22d828e5b65b.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c5 poster-click" data-drive="https://www.tokyvideo.com/br/embed/903246" role="button" style="background-image:url('assets/img-025-22d828e5b65b.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em Vida de Sereia</b><span>2010</span>
 </article>
 <article class="poster">
-<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1hIgUtqLWOJSpAIJ8n4UqQdEvUUxLdpjX/view?usp=drive_link" role="button" style="background-image:url('assets/img-026-bc3cac33d9cf.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c6 poster-click" data-drive="https://www.tokyvideo.com/br/embed/680668" role="button" style="background-image:url('assets/img-026-bc3cac33d9cf.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie Moda e Magia</b><span>2010</span>
 </article>
 <article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1YRhnanCrekB35nINvpr7nsHW8xh0IYck/view?usp=drive_link" role="button" style="background-image:url('assets/img-027-e114c8a8adba.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/631444" role="button" style="background-image:url('assets/img-027-e114c8a8adba.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e o Segredo das Fadas</b><span>2011</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/12Wpz5odLPJMLzVBstHTnPh1Yb3yhSxvS/view?usp=drive_link" role="button" style="background-image:url('assets/img-028-3fdd87fe2b61.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/631505" role="button" style="background-image:url('assets/img-028-3fdd87fe2b61.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Escola de Princesas</b><span>2011</span>
 </article>
 <article class="poster">
-<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1JfiVYTgaNLzCd4qa2pdp9mgQlFtVdMY4/view?usp=drive_link" role="button" style="background-image:url('assets/img-029-e457fef86ad9.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c3 poster-click" data-drive="https://www.tokyvideo.com/br/embed/631850" role="button" style="background-image:url('assets/img-029-e457fef86ad9.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Um Natal Perfeito</b><span>2011</span>
 </article>
 <article class="poster">
-<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/16K0rkrV9Xyn_DFASQj1arxcRNRnx_jYp/view?usp=drive_link" role="button" style="background-image:url('assets/img-030-3cb7d79c04b8.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c4 poster-click" data-drive="https://www.tokyvideo.com/br/embed/631887" role="button" style="background-image:url('assets/img-030-3cb7d79c04b8.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em Vida de Sereia 2</b><span>2012</span>
 </article>
 <article class="poster">
-<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1PpqJJ_7E3BctW9nkugbmK6HGma951m70/view?usp=drive_link" role="button" style="background-image:url('assets/img-031-28a2276fbea1.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c5 poster-click" data-drive="https://www.tokyvideo.com/br/embed/854595" role="button" style="background-image:url('assets/img-031-28a2276fbea1.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: A Princesa e a Popstar</b><span>2012</span>
 </article>
 <article class="poster">
-<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1bFGJ2VslpOSMiYNTRKo-9Fof7rJTkSl0/view?usp=drive_link" role="button" style="background-image:url('assets/img-032-98ce4987fd84.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c6 poster-click" data-drive="https://www.tokyvideo.com/br/embed/632346" role="button" style="background-image:url('assets/img-032-98ce4987fd84.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e as Sapatilhas Mágicas</b><span>2013</span>
 </article>
 <article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1YPa9EteDYjFkJWYJO_eUHuOJv7DG7oxK/view?usp=drive_link" role="button" style="background-image:url('assets/img-033-33c9017b9dec.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/654480" role="button" style="background-image:url('assets/img-033-33c9017b9dec.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie Butterfly e a Princesa Fairy</b><span>2013</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1nFKUOeKV8RyGAzoQAM3oyCUKTUqtwtcx/view?usp=drive_link" role="button" style="background-image:url('assets/img-034-a9d181f02ffc.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/636055" role="button" style="background-image:url('assets/img-034-a9d181f02ffc.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e Suas Irmãs em Uma Aventura de Cavalos</b><span>2013</span>
 </article>
 <article class="poster">
-<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1PmNEtgtcGv3hFpk4wm9p5MaFamR1n2T5/view?usp=drive_link" role="button" style="background-image:url('assets/img-035-d91f50530745.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c3 poster-click" data-drive="https://www.tokyvideo.com/br/embed/636345" role="button" style="background-image:url('assets/img-035-d91f50530745.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
-<b>Barbie: A Princesa das Pérolas</b><span>2014</span>
+<b>Barbie A Sereia das Pérolas</b><span>2014</span>
 </article>
 <article class="poster">
-<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1-QN--Top7Bf92XuSzAGwTQYVnp4t8e0R/view?usp=drive_link" role="button" style="background-image:url('assets/img-036-cce595f5474f.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c4 poster-click" data-drive="https://www.tokyvideo.com/br/embed/654450" role="button" style="background-image:url('assets/img-036-cce595f5474f.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e o Portal Secreto</b><span>2014</span>
 </article>
 <article class="poster">
-<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1-E0LmkDRZ7OzEkrLcW440x4twCe_1gXU/view?usp=drive_link" role="button" style="background-image:url('assets/img-037-338047d64ac5.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c5 poster-click" data-drive="https://www.tokyvideo.com/br/embed/636923" role="button" style="background-image:url('assets/img-037-338047d64ac5.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie Super Princesa</b><span>2015</span>
 </article>
 <article class="poster">
-<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1zGQ1nBH7adq1_VwlQUV0iMpUeTpH1oUe/view?usp=drive_link" role="button" style="background-image:url('assets/img-038-b64228c6e15a.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c6 poster-click" data-drive="https://www.tokyvideo.com/br/embed/628925" role="button" style="background-image:url('assets/img-038-b64228c6e15a.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Rock 'N Royals</b><span>2015</span>
 </article>
 <article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1Frb28z_kosU0yvwo7zTNQNOkhI8lkOv0/view?usp=drive_link" role="button" style="background-image:url('assets/img-039-39bc56ce149c.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/636382" role="button" style="background-image:url('assets/img-039-39bc56ce149c.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e Suas Irmãs em Uma Aventura de Cachorrinhos</b><span>2015</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1m6jIEGkJYHARzuyhec83DCvkzTfS16Cu/view?usp=drive_link" role="button" style="background-image:url('assets/img-040-02e99d243bcc.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/637251" role="button" style="background-image:url('assets/img-040-02e99d243bcc.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e as Agentes Secretas</b><span>2016</span>
 </article>
 <article class="poster">
-<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1Aq__QyuMXBoUUW0MV1TKAlN3Men1W3Yo/view?usp=drive_link" role="button" style="background-image:url('assets/img-041-0c98a12902de.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c3 poster-click" data-drive="https://www.tokyvideo.com/br/embed/636883" role="button" style="background-image:url('assets/img-041-0c98a12902de.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Aventura nas Estrelas</b><span>2016</span>
 </article>
 <article class="poster">
-<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1jjjeSKe8saWIdb3RFHmjgb9jAv6WaKbz/view?usp=drive_link" role="button" style="background-image:url('assets/img-042-35c9954e4a74.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c4 poster-click" data-drive="https://www.tokyvideo.com/br/embed/637837" role="button" style="background-image:url('assets/img-042-35c9954e4a74.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e Suas Irmãs em Busca dos Cachorrinhos</b><span>2016</span>
 </article>
 <article class="poster">
-<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/10EJ5lrBT_NnPfjSWWCE4TJxuxd1KDQuC/view?usp=drive_link" role="button" style="background-image:url('assets/img-043-ce81f8548757.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c5 poster-click" data-drive="https://www.tokyvideo.com/br/embed/632527" role="button" style="background-image:url('assets/img-043-ce81f8548757.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie em um Mundo de Videogame</b><span>2017</span>
 </article>
 <article class="poster">
-<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1LgDPhFF_EjEDtgmiNbufLSoQ69sgVNAN/view?usp=sharing" role="button" style="background-image:url('assets/img-044-1c437a07f8a2.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c6 poster-click" data-drive="https://www.tokyvideo.com/br/embed/638021" role="button" style="background-image:url('assets/img-044-1c437a07f8a2.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Magia dos Golfinhos</b><span>2017</span>
 </article>
 <article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/19yOz5YOmprtpbX8ZTIk6qL7_r-vOExcX/view?usp=drive_link" role="button" style="background-image:url('assets/img-045-a4fafa6b1a26.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/637928" role="button" style="background-image:url('assets/img-045-a4fafa6b1a26.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Aventura de Princesa</b><span>2020</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1HfxLZui8H79vqePnwDVTxKTWpDaIdQ3C/view?usp=drive_link" role="button" style="background-image:url('assets/img-046-75d621d8af13.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/638089" role="button" style="background-image:url('assets/img-046-75d621d8af13.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie &amp; Chelsea: O Aniversário Perdido</b><span>2021</span>
 </article>
 <article class="poster">
-<div class="cover c3 poster-click" data-drive="https://drive.google.com/file/d/1xPlRDS_GcCNxOUgbCQio_JPen1-uHJoQ/view?usp=drive_link" role="button" style="background-image:url('assets/img-047-0083fe65af70.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c3 poster-click" data-drive="https://www.tokyvideo.com/br/embed/638221" role="button" style="background-image:url('assets/img-047-0083fe65af70.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Cidade Grande, Grandes Sonhos</b><span>2021</span>
 </article>
 <article class="poster">
-<div class="cover c4 poster-click" data-drive="https://drive.google.com/file/d/1zlcEX5s1YuTf3KZxXd5h5V1UT1aeIVSK/view?usp=drive_link" role="button" style="background-image:url('assets/img-048-76418047e42a.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c4 poster-click" data-drive="https://www.tokyvideo.com/br/embed/632471" role="button" style="background-image:url('assets/img-048-76418047e42a.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Poder de Sereia</b><span>2022</span>
 </article>
 <article class="poster">
-<div class="cover c5 poster-click" data-drive="https://drive.google.com/file/d/1jAWd52XL7C-ExPCTYOHlr_7sP-RU-2vA/view?usp=drive_link" role="button" style="background-image:url('assets/img-049-9114e6fe6a85.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c5 poster-click" data-drive="https://www.tokyvideo.com/br/embed/638384" role="button" style="background-image:url('assets/img-049-9114e6fe6a85.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie: Epic Road Trip</b><span>2022</span>
 </article>
 <article class="poster">
-<div class="cover c6 poster-click" data-drive="https://drive.google.com/file/d/1vuYmQ1NRTQOLJp6LLJJHeZQPKId6_Pun/view?usp=drive_link" role="button" style="background-image:url('assets/img-050-6371ec717a20.jpg');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c6 poster-click" data-drive="https://www.tokyvideo.com/br/embed/638411" role="button" style="background-image:url('assets/img-050-6371ec717a20.jpg');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e Skipper e a Grande Aventura de Babás</b><span>2023</span>
 </article>
 <article class="poster">
-<div class="cover c1 poster-click" data-drive="https://drive.google.com/file/d/1CNz3vpRgGvERRn3bGndZ_Vx_SreGoS2u/view?usp=drive_link" role="button" style="background-image:url('assets/img-051-f6d88caea6f2.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c1 poster-click" data-drive="https://www.tokyvideo.com/br/embed/638488" role="button" style="background-image:url('assets/img-051-f6d88caea6f2.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie e Stacie ao Resgate</b><span>2024</span>
 </article>
 <article class="poster">
-<div class="cover c2 poster-click" data-drive="https://drive.google.com/file/d/1uaRKpbpjjQyQaGOjwoGX1vk_R2p0Yclo/view?usp=drive_link" role="button" style="background-image:url('assets/img-052-fe04cda6d9b6.webp');background-size:cover;background-position:center;" tabindex="0">
+<div class="cover c2 poster-click" data-drive="https://www.tokyvideo.com/br/embed/677899" role="button" style="background-image:url('assets/img-052-fe04cda6d9b6.webp');background-size:cover;background-position:center;" tabindex="0">
 </div>
 <b>Barbie &amp; Teresa: Receita para Amizade</b><span>2025</span>
 </article>
@@ -1662,7 +1462,7 @@ html.access-granted #maintenancePopup{
   <div class="dreamhouse-seasons" id="dreamhouseSeasons" hidden>
     <div class="dreamhouse-season-head"><div><h2>Barbie Life in the Dreamhouse</h2><p>7 temporadas • escolha uma temporada para assistir</p></div></div>
     <div class="dreamhouse-season-grid">
-      <article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/11A0m00ADKQNSDtShN6sgNfnNXQm8lo99/view?usp=drive_link" data-season="1" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-054-68118e5cf8a5.webp" alt="Temporada 1"><span class="season-overlay">TEMPORADA 1</span></div><b>Temporada 1</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1_PNY5iiKr-iAjARoF6yOhjTsnLx-Qp-3/view?usp=drive_link" data-season="2" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-055-dab72a2189e2.webp" alt="Temporada 2"><span class="season-overlay">TEMPORADA 2</span></div><b>Temporada 2</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1Z6Jg4_NEW9wpYgg3LcqcBqUjNNPPGG4S/view?usp=drive_link" data-season="3" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-056-6ec0b47945b8.webp" alt="Temporada 3"><span class="season-overlay">TEMPORADA 3</span></div><b>Temporada 3</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1SpeFr0sLFsaLKYKpp1re6LQJlN640KVy/view?usp=drive_link" data-season="4" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-057-45a5955083bc.webp" alt="Temporada 4"><span class="season-overlay">TEMPORADA 4</span></div><b>Temporada 4</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1Z--EZYQsEzIdy4ocfdmH6VFUxnFvLarK/view?usp=drive_link" data-season="5" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-058-e2b98950c1e7.webp" alt="Temporada 5"><span class="season-overlay">TEMPORADA 5</span></div><b>Temporada 5</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1Obtr2hYErFVuUhSEyEn6SgqFthzA4C86/view?usp=drive_link" data-season="6" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-059-e85563bed872.webp" alt="Temporada 6"><span class="season-overlay">TEMPORADA 6</span></div><b>Temporada 6</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://drive.google.com/file/d/1CqpHCT972g2nd06C5oByDUTz-YZ131Nj/view?usp=drive_link" data-season="7" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-060-b70d675dae85.webp" alt="Temporada 7"><span class="season-overlay">TEMPORADA 7</span></div><b>Temporada 7</b></article>
+      <article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://www.tokyvideo.com/br/embed/702881" data-season="1" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-054-68118e5cf8a5.webp" alt="Temporada 1"><span class="season-overlay">TEMPORADA 1</span></div><b>Temporada 1</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://www.tokyvideo.com/br/embed/702956" data-season="2" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-055-dab72a2189e2.webp" alt="Temporada 2"><span class="season-overlay">TEMPORADA 2</span></div><b>Temporada 2</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://www.tokyvideo.com/br/embed/702963" data-season="3" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-056-6ec0b47945b8.webp" alt="Temporada 3"><span class="season-overlay">TEMPORADA 3</span></div><b>Temporada 3</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://www.tokyvideo.com/br/embed/703078" data-season="4" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-057-45a5955083bc.webp" alt="Temporada 4"><span class="season-overlay">TEMPORADA 4</span></div><b>Temporada 4</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://www.tokyvideo.com/br/embed/703084" data-season="5" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-058-e2b98950c1e7.webp" alt="Temporada 5"><span class="season-overlay">TEMPORADA 5</span></div><b>Temporada 5</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://www.tokyvideo.com/br/embed/703114" data-season="6" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-059-e85563bed872.webp" alt="Temporada 6"><span class="season-overlay">TEMPORADA 6</span></div><b>Temporada 6</b></article><article class="poster dreamhouse-season-card"><div class="cover poster-click" role="button" tabindex="0" data-drive="https://www.tokyvideo.com/br/embed/703130" data-season="7" onclick="openDreamhouseSeason(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDreamhouseSeason(this)}"><img src="assets/img-060-b70d675dae85.webp" alt="Temporada 7"><span class="season-overlay">TEMPORADA 7</span></div><b>Temporada 7</b></article>
     </div>
   </div>
 </section>
