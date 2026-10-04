@@ -1159,6 +1159,86 @@ document.addEventListener('DOMContentLoaded',function(){
 
 </head>
 <body>
+  <div id="maintenanceNotice">
+
+  <div class="maintenance-card">
+
+    <img
+      src="assets/aviso-manutencao.png"
+      alt="Aviso de manutenção"
+      class="maintenance-image"
+    >
+
+    <a
+      href="https://t.me/+YeQTVIMy9vBiMmYx"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="maintenance-telegram"
+      aria-label="Entrar em nosso canal no Telegram"
+    ></a>
+
+  </div>
+
+</div>
+
+<style>
+  #maintenanceNotice{
+    position:fixed;
+    inset:0;
+    z-index:2147483647;
+    background:#ffd9e7;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    overflow-y:auto;
+    padding:0;
+  }
+
+  .maintenance-card{
+    position:relative;
+
+    width:100%;
+    max-width:700px;
+
+    margin:0 auto;
+
+    line-height:0;
+  }
+
+  .maintenance-image{
+    display:block;
+
+    width:100%;
+    height:auto;
+  }
+
+  .maintenance-telegram{
+    position:absolute;
+
+    left:14%;
+    bottom:5.2%;
+
+    width:72%;
+    height:9%;
+
+    border-radius:999px;
+
+    cursor:pointer;
+    z-index:10;
+  }
+
+  .maintenance-telegram:active{
+    transform:scale(.98);
+  }
+
+  @media(max-width:600px){
+    .maintenance-card{
+      max-width:100%;
+    }
+  }
+</style>
 <div id="exclusiveLoginBackdrop" style="display:flex" role="dialog" aria-modal="true" aria-labelledby="exclusiveLoginTitle">
   <div class="exclusive-login-card">
     <div class="exclusive-lock-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.5 10V7.5a4.5 4.5 0 0 1 9 0V10" stroke="#e7337e" stroke-width="2.2" stroke-linecap="round"/><rect x="5" y="10" width="14" height="11" rx="3" fill="#e7337e"/><circle cx="12" cy="15.2" r="1.5" fill="white"/><path d="M12 16.5V18" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
