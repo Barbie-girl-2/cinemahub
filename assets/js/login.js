@@ -76,8 +76,8 @@
   function showRecovery() {
     form.hidden = true;
     loginTitle.hidden = true;
-    loginIntro.hidden = true;
-    recovery.hidden = false;
+    if (loginIntro) loginIntro.hidden = true;
+    if (loginIntro) loginIntro.hidden = false;
     recoveryResult.hidden = true;
     recoveryFeedback.textContent = '';
     recoveryEmail.value = '';
