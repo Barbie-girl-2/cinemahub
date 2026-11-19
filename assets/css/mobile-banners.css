@@ -1,0 +1,429 @@
+/* Cinema das Girls — celular com banner cinematográfico em uma única peça.
+   Carregado DEPOIS do CSS base para neutralizar as antigas regras de
+   "imagem em cima + painel abaixo", sem alterar a experiência desktop. */
+@media (max-width: 720px) {
+  #app .franchise-page .barbie-nut-banner {
+    display:flex!important;
+    position:relative!important;
+    isolation:isolate!important;
+    align-items:center!important;
+    overflow:hidden!important;
+    width:100%!important;
+    height:clamp(284px,79vw,320px)!important;
+    min-height:0!important;
+    max-height:320px!important;
+    border-radius:18px!important;
+    background:#dda3c8;
+  }
+  #app .franchise-page .barbie-nut-banner > img.barbie-nut-art {
+    display:block!important;
+    position:absolute!important;
+    inset:0!important;
+    left:0!important;
+    right:0!important;
+    top:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:66% center!important;
+    z-index:0!important;
+    margin:0!important;
+    filter:none!important;
+    mask-image:none!important;
+    -webkit-mask-image:none!important;
+  }
+  #app .franchise-page .barbie-nut-banner::after {
+    display:block!important;
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:1!important;
+    background:linear-gradient(90deg,rgba(245,210,236,.97) 0%,rgba(243,208,232,.88) 39%,rgba(243,208,232,.43) 69%,rgba(243,208,232,.04) 100%)!important;
+    pointer-events:none!important;
+  }
+  #app .franchise-page .barbie-nut-banner > .barbie-nut-content {
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+    position:relative!important;
+    z-index:2!important;
+    box-sizing:border-box!important;
+    width:92%!important;
+    max-width:92%!important;
+    height:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:12px 16px!important;
+    background:transparent!important;
+    text-shadow:none!important;
+    overflow:visible!important;
+  }
+  #app .franchise-page .barbie-nut-banner .barbie-nut-label {
+    padding:4px 9px!important;
+    font-size:9px!important;
+    line-height:1.2!important;
+    flex-shrink:0!important;
+  }
+  #app .franchise-page .barbie-nut-banner .barbie-nut-content h2 {
+    font-size:clamp(24px,6.6vw,32px)!important;
+    line-height:1.06!important;
+    letter-spacing:-.035em!important;
+    margin:9px 0 7px!important;
+    max-width:100%!important;
+    overflow-wrap:break-word!important;
+  }
+  #app .franchise-page .barbie-nut-banner .barbie-nut-content h2 em {display:inline!important;}
+  #app .franchise-page .barbie-nut-banner .barbie-nut-content p {
+    font-size:clamp(10px,2.65vw,12px)!important;
+    line-height:1.32!important;
+    font-weight:650!important;
+    margin:0 0 8px!important;
+    max-width:100%!important;
+    overflow-wrap:break-word!important;
+  }
+  #app .franchise-page .barbie-nut-banner .barbie-nut-meta {
+    display:flex!important;
+    align-items:center!important;
+    flex-wrap:wrap!important;
+    gap:5px!important;
+    margin:1px 0 0!important;
+    flex-shrink:0!important;
+  }
+  #app .franchise-page .barbie-nut-banner .barbie-nut-meta span {
+    padding:4px 6px!important;
+    font-size:9px!important;
+    line-height:1.1!important;
+  }
+  #app .franchise-page .barbie-nut-banner .barbie-nut-watch {
+    display:inline-flex!important;
+    min-height:33px!important;
+    padding:7px 13px!important;
+    margin:8px 0 0!important;
+    font-size:11px!important;
+    line-height:1.15!important;
+    flex-shrink:0!important;
+    box-shadow:0 4px 12px rgba(83,8,51,.16)!important;
+  }
+  #app .franchise-page .barbie-nut-banner .barbie-nut-watch .icon {width:14px;height:14px;}
+  #app .franchise-page .barbie-nut-banner.twilight-feature-banner,
+  #app .franchise-page .barbie-nut-banner.mh-coral-feature {background:#07394b!important;}
+  #app .franchise-page .barbie-nut-banner.twilight-feature-banner::after {
+    background:linear-gradient(90deg,rgba(5,34,48,.97) 0%,rgba(5,39,52,.92) 42%,rgba(7,51,64,.52) 73%,rgba(7,51,64,.09) 100%)!important;
+  }
+  #app .franchise-page .barbie-nut-banner.mh-coral-feature::after {
+    background:linear-gradient(90deg,rgba(1,40,51,.97) 0%,rgba(1,45,54,.92) 42%,rgba(1,48,56,.50) 74%,rgba(1,56,62,.08) 100%)!important;
+  }
+  #app .franchise-page .barbie-nut-banner.terror-substance-banner::after {
+    background:linear-gradient(90deg,rgba(255,218,238,.98) 0%,rgba(255,217,237,.92) 44%,rgba(255,214,234,.53) 73%,rgba(255,210,232,.03) 100%)!important;
+  }
+  #app .franchise-page .barbie-nut-banner.twilight-feature-banner > img.barbie-nut-art,
+  #app .franchise-page .barbie-nut-banner.mh-coral-feature > img.barbie-nut-art,
+  #app .franchise-page .barbie-nut-banner.terror-substance-banner > img.barbie-nut-art {
+    object-position:68% center!important;
+  }
+  #app .franchise-page .barbie-nut-banner .twilight-feature-content,
+  #app .franchise-page .barbie-nut-banner .mh-coral-feature-text {color:#fff!important;}
+  #app .franchise-page .barbie-nut-banner .twilight-feature-content h2,
+  #app .franchise-page .barbie-nut-banner .mh-coral-feature-text h2 {color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.26)!important;}
+  #app .franchise-page .barbie-nut-banner .twilight-feature-content p,
+  #app .franchise-page .barbie-nut-banner .mh-coral-feature-text p {color:#f9ffff!important;}
+  #app .franchise-page .barbie-nut-banner .terror-substance-content h2 {font-size:clamp(23px,6.8vw,30px)!important;}
+  #app .franchise-page .barbie-nut-banner .terror-substance-content .terror-substance-actions {
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    gap:2px!important;
+    margin:1px 0 0!important;
+    padding:0!important;
+    flex-shrink:0!important;
+  }
+  #app .franchise-page .barbie-nut-banner .terror-substance-content .terror-substance-actions .barbie-nut-watch {
+    margin-top:6px!important;
+  }
+}
+@media (max-width: 650px) {
+  /* O banner inicial também usa foto + gradiente + título + CTA sobre a imagem. */
+  #app section.hero.home-uniform-hero {
+    position:relative!important;
+    isolation:isolate!important;
+    display:block!important;
+    overflow:hidden!important;
+    width:100%!important;
+    height:clamp(242px,68vw,275px)!important;
+    min-height:0!important;
+    max-height:275px!important;
+    aspect-ratio:auto!important;
+    border-radius:18px!important;
+  }
+  #app section.hero.home-uniform-hero > img.hero-art,
+  #app section.hero.home-uniform-hero > img.feature-full-photo,
+  #app section.hero.home-uniform-hero > img.cinelove-photo,
+  #app section.hero.home-uniform-hero > img.night-hero-photo {
+    display:block!important;
+    position:absolute!important;
+    inset:0!important;
+    left:0!important;
+    right:0!important;
+    top:0!important;
+    bottom:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:62% center!important;
+    transform:none!important;
+    mask-image:none!important;
+    -webkit-mask-image:none!important;
+    z-index:0!important;
+    filter:none!important;
+  }
+  #app section.hero.home-uniform-hero::before {
+    content:""!important;
+    display:block!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:2!important;
+    background:linear-gradient(90deg,rgba(76,17,67,.96),rgba(76,17,67,.83) 47%,rgba(76,17,67,.24) 87%,rgba(76,17,67,.04))!important;
+    pointer-events:none!important;
+  }
+  #app section.hero.home-uniform-hero.hero-disney::before {
+    background:linear-gradient(90deg,rgba(17,42,76,.94),rgba(21,52,87,.82) 47%,rgba(21,52,87,.24) 87%,transparent)!important;
+  }
+  #app section.hero.home-uniform-hero.hero-moranguinho::before {
+    background:linear-gradient(90deg,rgba(72,13,55,.93),rgba(72,13,55,.80) 47%,rgba(72,13,55,.23) 88%,transparent)!important;
+  }
+  #app section.hero.home-uniform-hero.hero-cinelove::before {
+    background:linear-gradient(90deg,rgba(255,232,246,.97),rgba(255,232,246,.87) 51%,rgba(255,232,246,.33) 87%,transparent)!important;
+  }
+  #app section.hero.home-uniform-hero > .feature-full-wash,
+  #app section.hero.home-uniform-hero > .cinelove-wash,
+  #app section.hero.home-uniform-hero > .night-hero-wash {
+    display:none!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content,
+  #app section.hero.home-uniform-hero.hero-noite .hero-content.home-hero-content,
+  #app section.hero.home-uniform-hero.hero-cinelove .hero-content.home-hero-content {
+    box-sizing:border-box!important;
+    position:relative!important;
+    z-index:4!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+    grid-template-rows:none!important;
+    gap:0!important;
+    width:93%!important;
+    max-width:93%!important;
+    height:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:11px 12px 23px 15px!important;
+    background:transparent!important;
+    text-align:left!important;
+    overflow:visible!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .hero-type {
+    margin:0 0 7px!important;
+    padding:4px 10px!important;
+    font-size:9px!important;
+    line-height:1.1!important;
+    flex-shrink:0!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-title,
+  #app section.hero.home-uniform-hero.hero-cinelove .hero-content.home-hero-content > .home-hero-title {
+    display:block!important;
+    margin:0 0 8px!important;
+    padding:0!important;
+    max-width:100%!important;
+    font-size:clamp(25px,7vw,31px)!important;
+    line-height:1.03!important;
+    flex-shrink:0!important;
+    color:#fff!important;
+    overflow-wrap:break-word!important;
+  }
+  #app section.hero.home-uniform-hero.hero-cinelove .hero-content.home-hero-content > .home-hero-title {color:#9e175f!important;}
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-description {
+    display:block!important;
+    position:static!important;
+    align-self:flex-start!important;
+    flex:0 0 auto!important;
+    margin:0!important;
+    padding:0!important;
+    max-width:100%!important;
+    font-size:clamp(10px,2.8vw,12px)!important;
+    line-height:1.32!important;
+    font-weight:650!important;
+    -webkit-line-clamp:unset!important;
+    overflow:visible!important;
+    color:#fff!important;
+  }
+  #app section.hero.home-uniform-hero.hero-cinelove .hero-content.home-hero-content > .home-hero-description {
+    color:#913260!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-actions,
+  #app section.hero.home-uniform-hero.hero-noite .hero-content.home-hero-content > .home-hero-actions {
+    display:flex!important;
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    top:auto!important;
+    transform:none!important;
+    align-items:center!important;
+    align-self:flex-start!important;
+    justify-content:flex-start!important;
+    margin:10px 0 0!important;
+    padding:0!important;
+    gap:7px!important;
+    flex:0 0 auto!important;
+    flex-wrap:nowrap!important;
+  }
+  #app section.hero.home-uniform-hero .home-hero-actions .home-hero-cta {
+    min-width:0!important;
+    min-height:34px!important;
+    height:34px!important;
+    padding:6px 11px!important;
+    font-size:11px!important;
+    white-space:nowrap!important;
+  }
+  #app section.hero.home-uniform-hero .home-hero-actions .home-carousel-arrows {
+    position:static!important;
+    display:flex!important;
+    margin:0!important;
+    align-items:center!important;
+    gap:5px!important;
+  }
+  #app section.hero.home-uniform-hero .home-carousel-arrows .banner-arrow {
+    position:static!important;
+    width:29px!important;
+    height:29px!important;
+    flex:0 0 29px!important;
+    transform:none!important;
+  }
+  #app section.hero.home-uniform-hero .hero-dots {bottom:9px!important;}
+}
+@media (max-width:360px) {
+  #app section.hero.home-uniform-hero {
+    height:251px!important;
+    max-height:251px!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content {
+    padding:9px 8px 22px 12px!important;
+    width:96%!important;
+    max-width:96%!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-title {
+    font-size:24px!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-description {
+    font-size:10px!important;
+    line-height:1.28!important;
+  }
+  #app .franchise-page .barbie-nut-banner {height:300px!important;max-height:300px!important;}
+  #app .franchise-page .barbie-nut-banner > .barbie-nut-content {width:96%!important;max-width:96%!important;padding:11px 13px!important;}
+  #app .franchise-page .barbie-nut-banner .barbie-nut-content p {font-size:10px!important;line-height:1.26!important;}
+}
+/* Um único cartaz original reutilizado no topo da série Três Espiãs Demais!. */
+#app .cdg-spies-series-poster {
+  display:flex;align-items:center;gap:16px;
+  background:linear-gradient(105deg,#ffe5f2,#fff8fc);
+  border:1px solid #f1c3dc;border-radius:17px;
+  padding:12px 15px;margin:0 0 16px;
+}
+#app .cdg-spies-series-poster > img {
+  display:block;flex:0 0 88px;width:88px;height:118px;
+  border-radius:11px;object-fit:cover;
+  box-shadow:0 5px 12px rgba(128,21,86,.17);
+}
+#app .cdg-spies-series-poster > div{min-width:0;}
+#app .cdg-spies-series-poster span{font-size:11px;font-weight:850;color:#bd276d;text-transform:uppercase;letter-spacing:.08em;}
+#app .cdg-spies-series-poster h3{font-size:clamp(20px,3.6vw,28px);line-height:1.12;margin:6px 0;color:#951355;}
+#app .cdg-spies-series-poster p{margin:0;color:#8e607b;font-size:13px;}
+@media(max-width:420px){
+  #app .cdg-spies-series-poster{gap:12px;padding:10px;}
+  #app .cdg-spies-series-poster>img{width:72px;height:98px;flex-basis:72px;}
+  #app .cdg-spies-series-poster h3{font-size:19px;}
+  #app .cdg-spies-series-poster p{font-size:11px;}
+}
+
+/* Moranguinho Clássica: voltar ao cartaz da série. */
+#app .strawberry-series-back{display:inline-flex;align-items:center;gap:9px;border:1px solid #f1c3dc;border-radius:999px;padding:10px 16px;margin:3px 0 14px;background:#fff2f8;color:#9c1558;font-weight:800;font-size:13px;cursor:pointer}
+#app .strawberry-series-back svg{width:17px;height:17px}
+#app .strawberry-series-back:hover{background:#ffe5f1}
+
+/* 18/11 – Banners principais mais baixos, responsivos e consistentes. */
+@media (min-width: 992px) {
+  #app section.hero.home-uniform-hero,
+  #app section.hero.home-uniform-hero:not(.hero-barbie){
+    height:clamp(380px,32vw,455px)!important;
+    min-height:0!important;max-height:455px!important;aspect-ratio:auto!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content{
+    justify-content:flex-end!important;padding-top:20px!important;padding-bottom:109px!important;
+  }
+  #app section.hero.home-uniform-hero .home-hero-actions,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-actions{
+    bottom:38px!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-title{font-size:clamp(38px,4vw,57px)!important;}
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-description{font-size:clamp(15px,1.2vw,18px)!important;line-height:1.36!important;}
+}
+@media (min-width:651px) and (max-width:991px) {
+  #app section.hero.home-uniform-hero,
+  #app section.hero.home-uniform-hero:not(.hero-barbie){
+    height:365px!important;min-height:0!important;max-height:365px!important;aspect-ratio:auto!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content{
+    justify-content:flex-end!important;padding-top:18px!important;padding-bottom:93px!important;
+  }
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-actions{
+    bottom:31px!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-title{font-size:clamp(32px,4.6vw,47px)!important;}
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-description{font-size:clamp(12px,1.65vw,16px)!important;line-height:1.35!important;}
+}
+@media (max-width:650px) {
+  #app section.hero.home-uniform-hero,
+  #app section.hero.home-uniform-hero:not(.hero-barbie),
+  #app section.hero.hero-moranguinho.home-uniform-hero,
+  #app section.hero.hero-disney.home-uniform-hero{
+    height:clamp(255px,74vw,300px)!important;min-height:0!important;max-height:300px!important;aspect-ratio:auto!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content{
+    position:relative!important;height:100%!important;justify-content:flex-end!important;
+    width:91%!important;max-width:91%!important;padding:12px 10px 25px 15px!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-title,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-title{
+    font-size:clamp(25px,6.7vw,32px)!important;line-height:1.04!important;margin-bottom:6px!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-description,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-description{
+    font-size:clamp(10px,2.62vw,12.5px)!important;line-height:1.27!important;
+    margin:0!important;max-width:80%!important;overflow:visible!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-actions,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-actions{
+    position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+    display:flex!important;margin:9px 0 0!important;gap:7px!important;align-self:flex-start!important;
+  }
+  #app section.hero.home-uniform-hero .home-hero-actions .home-hero-cta{min-height:34px!important;height:34px!important;padding:6px 11px!important;font-size:11px!important;}
+  #app section.hero.home-uniform-hero .home-carousel-arrows .banner-arrow{width:29px!important;height:29px!important;}
+}
+@media(max-width:360px){
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-title{font-size:23px!important;}
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content > .home-hero-description{font-size:10px!important;max-width:87%!important;}
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content{padding-left:12px!important;padding-bottom:24px!important;}
+}
+/* Agrupamento responsivo dos filmes de terror sem modificar outras franquias. */
+#app .cdg-terror-group{margin:0 0 32px;}
+#app .cdg-terror-group > h3{color:#8d275a;font-size:clamp(18px,2.25vw,25px);font-weight:800;margin:0 0 17px;padding-left:12px;border-left:4px solid #e74993;}
+#app .cdg-terror-group .poster-grid{margin-top:0;}

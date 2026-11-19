@@ -1,0 +1,161 @@
+/* Cinema das Girls - Player padronizado / versão 2026-11-18
+   O CSS está isolado dos catálogos e não modifica capas, links ou episódios. */
+
+/* Evita que o player estique até a altura total da lista de temporadas. */
+#app .monster-series-viewer .barbie-dreamhouse-layout,
+#app .barbie-dreamhouse-layout,
+#app .series-viewer-grid{align-items:start!important}
+#app .monster-series-viewer .barbie-dreamhouse-main,
+#app .barbie-dreamhouse-main,
+#app .series-video-card.cdg-unified-series-player{
+  align-self:start!important;
+  height:auto!important;
+  min-height:0!important;
+  border-radius:17px!important;
+  border:1px solid #ecd6e1!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background:#fff!important;
+  box-shadow:0 10px 26px rgba(55,18,40,.11)!important;
+}
+/* Um player 16:9, independente da duração da lista de episódios. */
+#app .monster-series-viewer .barbie-dreamhouse-video,
+#app .barbie-dreamhouse-video,
+#app .series-video-card.cdg-unified-series-player .series-stage{
+  width:100%!important;
+  aspect-ratio:16 / 9!important;
+  height:auto!important;
+  border:0!important;
+  border-radius:0!important;
+  margin:0!important;
+  box-shadow:none!important;
+  background:#211727!important;
+}
+#app .barbie-dreamhouse-video iframe,
+#app .series-video-card.cdg-unified-series-player .series-stage iframe{
+  display:block!important;width:100%!important;height:100%!important;
+  border:0!important;
+}
+/* O rodapé fica branco - sem a faixa rosa, bordas e espaço de fundo sobrando. */
+#app .barbie-player-footer,
+#app .monster-series-viewer .barbie-player-footer,
+#app .series-video-card.cdg-unified-series-player .barbie-player-footer{
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  gap:10px!important;
+  padding:12px 15px!important;
+  min-height:62px!important;
+  background:#fff!important;
+  background-image:none!important;
+  color:#8e2356!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+#app .monster-series-viewer .mh-player-help{display:flex!important;justify-content:flex-end!important;min-width:0}
+#app .barbie-player-count,
+#app .monster-series-viewer .barbie-player-count,
+#app .series-video-card.cdg-unified-series-player .barbie-player-count{
+  color:#87526b!important;
+  font-size:12px!important;
+  font-weight:750!important;
+  text-shadow:none!important;
+  white-space:normal!important;
+  text-align:right;
+}
+#app .barbie-player-actions{display:flex!important;align-items:center!important;gap:9px!important}
+#app .barbie-player-actions button,
+#app .monster-series-viewer .barbie-player-actions button,
+#app .monster-series-viewer .barbie-player-actions button.barbie-next{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  min-height:40px!important;padding:9px 14px!important;border-radius:12px!important;
+  background:#fff2f9!important;border:1px solid #f2c7dc!important;
+  color:#b71568!important;font-size:13px!important;font-weight:800!important;
+  box-shadow:none!important;text-shadow:none!important;
+}
+#app .barbie-player-actions button.barbie-next,
+#app .monster-series-viewer .barbie-player-actions button.barbie-next{
+  background:#ee218a!important;border-color:#ee218a!important;color:#fff!important;
+}
+#app .barbie-player-actions button:disabled,
+#app .monster-series-viewer .barbie-player-actions button:disabled{
+  opacity:.38!important;cursor:not-allowed!important;background:#f5eff3!important;
+  border-color:#e9d9e3!important;color:#aa8699!important;box-shadow:none!important;
+}
+#app .barbie-player-actions button:focus-visible{outline:3px solid #ae0d62!important;outline-offset:2px!important}
+#app .series-video-card.cdg-unified-series-player .cdg-unified-episode-details{
+  padding:12px 16px!important;border-top:1px solid #f3e4ec!important;background:#fff!important;
+}
+#app .series-video-card.cdg-unified-series-player .cdg-unified-episode-details h3{margin:0 0 4px!important;font-size:15px!important}
+#app .series-video-card.cdg-unified-series-player .cdg-unified-episode-details p{margin:0!important;font-size:11px!important}
+@media(max-width:660px){
+  #app .barbie-player-footer,#app .monster-series-viewer .barbie-player-footer,
+  #app .series-video-card.cdg-unified-series-player .barbie-player-footer{
+    min-height:56px!important;padding:10px 11px!important;gap:6px!important;
+  }
+  #app .barbie-player-actions{gap:6px!important}
+  #app .barbie-player-actions button,
+  #app .monster-series-viewer .barbie-player-actions button,
+  #app .monster-series-viewer .barbie-player-actions button.barbie-next{
+    min-height:36px!important;padding:8px 10px!important;font-size:11px!important;
+  }
+  #app .barbie-player-count,#app .monster-series-viewer .barbie-player-count,
+  #app .series-video-card.cdg-unified-series-player .barbie-player-count{font-size:10px!important}
+}
+@media(max-width:385px){
+ #app .barbie-player-footer,#app .monster-series-viewer .barbie-player-footer,
+ #app .series-video-card.cdg-unified-series-player .barbie-player-footer{flex-direction:column!important;align-items:stretch!important}
+ #app .barbie-player-actions{justify-content:space-between!important}
+ #app .barbie-player-count,#app .monster-series-viewer .barbie-player-count,
+ #app .series-video-card.cdg-unified-series-player .barbie-player-count{text-align:center!important}
+}
+
+
+/* Cinema das Girls — playlists com o mesmo desenho de Barbie Dreamhouse */
+#app .cdg-dreamhouse-playlist{margin:18px auto 0;max-width:1250px;min-width:0}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-layout{align-items:start!important}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-main{align-self:start!important}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-heading{margin:0 0 13px!important}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-heading p{margin:5px 0 0!important}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-side{max-width:100%;height:auto!important;min-width:0}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-list{overflow-y:auto;max-height:460px!important}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-item{min-width:0}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-item span{overflow:hidden}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-item strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+#app .cdg-dreamhouse-playlist .cdg-dreamhouse-season-options{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px 5px;background:#fff6fb}
+#app .cdg-dreamhouse-playlist .cdg-dreamhouse-season-options button{border:1px solid #f1c4db;color:#ab2467;background:white;border-radius:10px;padding:8px 10px;font-size:12px;font-weight:800;cursor:pointer}
+#app .cdg-dreamhouse-playlist .cdg-dreamhouse-season-options button.is-selected{border-color:#db388d;background:#fce5f0;color:#9c0a58}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-video{aspect-ratio:16/9!important;position:relative;overflow:hidden}
+#app .cdg-dreamhouse-playlist .barbie-dreamhouse-video iframe{position:absolute;inset:0;width:100%;height:100%}
+#app .cdg-dreamhouse-playlist .cdg-series-playlist-placeholder img{object-fit:cover!important;width:100%;height:100%;filter:brightness(.7)}
+#app .cdg-dreamhouse-playlist .cdg-series-playlist-placeholder .barbie-dreamhouse-play{max-width:max-content;bottom:16px;left:50%;right:auto;transform:translateX(-50%);white-space:nowrap}
+#app .cdg-dreamhouse-playlist .cdg-series-external-player{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:15px;color:white;text-align:center;background:linear-gradient(125deg,#2b183d,#4f2062)}
+#app .cdg-dreamhouse-playlist .cdg-series-external-player p{margin:0;font-size:13px;color:#f7ddec}
+#app .cdg-dreamhouse-playlist .cdg-series-external-player a{border-radius:10px;padding:10px 18px;color:#9e0f5a;background:#fff;text-decoration:none;font-weight:850}
+#app .cdg-bratz-playlist-preview{max-width:1250px;margin:36px auto;padding:0 20px 36px}
+#app .cdg-bratz-playlist-preview .barbie-dreamhouse-heading .barbie-series-kicker{display:block;font-size:12px;color:#ac3373;font-weight:800;margin-bottom:6px}
+#app .cdg-myscene-page .cdg-myscene-film-grid{display:grid;grid-template-columns:repeat(3,minmax(0,180px));gap:16px;margin:15px 0 28px;justify-content:start}
+#app .cdg-myscene-page .cdg-myscene-film-card{width:100%;min-width:0;cursor:pointer;text-align:left}
+#app .cdg-myscene-page .cdg-myscene-film-card.is-selected .poster-cover{outline:3px solid #e32c89;outline-offset:2px}
+#app .cdg-myscene-page .cdg-myscene-film-card .poster-cover{position:relative;display:block;overflow:hidden;border-radius:11px;aspect-ratio:2/3}
+#app .cdg-myscene-page .cdg-myscene-film-card .poster-cover img{width:100%;height:100%;object-fit:cover}
+#app .cdg-myscene-page .cdg-myscene-soon-label{position:absolute;left:8px;bottom:8px;border-radius:20px;background:#4f264cee;color:#fff;font-size:11px;padding:6px 9px;font-weight:800}
+#app .cdg-myscene-page .cdg-myscene-film-card strong{display:block;font-size:13px;margin-top:8px}
+#app .cdg-myscene-page .cdg-myscene-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#171128}
+#app .cdg-myscene-page .cdg-myscene-empty img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(6px) brightness(.28);transform:scale(1.06)}
+#app .cdg-myscene-page .cdg-myscene-empty div{position:relative;z-index:1;color:white;text-align:center;padding:20px;max-width:390px}
+#app .cdg-myscene-page .cdg-myscene-empty strong{font-size:29px}
+#app .cdg-myscene-page .cdg-myscene-empty p{font-size:13px;line-height:1.5}
+#app .cdg-myscene-page .cdg-myscene-placeholder img{object-fit:contain!important;width:100%;height:100%;background:#25172d}
+#app .cdg-myscene-page .cdg-myscene-placeholder .barbie-dreamhouse-play{max-width:max-content;bottom:16px;left:50%;right:auto;transform:translateX(-50%);white-space:nowrap}
+@media(max-width:750px){
+  #app .cdg-dreamhouse-playlist .barbie-dreamhouse-layout{grid-template-columns:1fr!important}
+  #app .cdg-dreamhouse-playlist .barbie-dreamhouse-list{max-height:400px!important}
+  #app .cdg-myscene-page .cdg-myscene-film-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+  #app .cdg-bratz-playlist-preview{margin:20px auto;padding:0 14px 26px}
+}
+@media(max-width:380px){
+  #app .cdg-myscene-page .cdg-myscene-film-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #app .cdg-dreamhouse-playlist .cdg-series-playlist-placeholder .barbie-dreamhouse-play{font-size:11px;padding:10px 13px}
+}

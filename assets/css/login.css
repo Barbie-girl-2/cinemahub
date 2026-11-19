@@ -1,0 +1,88 @@
+/* Tela inicial de login — Cinema das Girls */
+#cdgLoginGate { position:fixed; inset:0; z-index:2147483647; display:grid; place-items:center; padding:clamp(16px,4vw,40px); overflow-y:auto; box-sizing:border-box; background:rgba(255,244,250,.22); -webkit-backdrop-filter:blur(6px) saturate(.98); backdrop-filter:blur(6px) saturate(.98); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; color:#50243b; isolation:isolate; }
+#cdgLoginGate::before {content:""; position:fixed; inset:0; z-index:-3; pointer-events:none; background:linear-gradient(180deg, rgba(255,239,247,.24) 0%, rgba(255,229,240,.22) 44%, rgba(255,242,248,.30) 100%);} 
+#cdgLoginGate::after {content:""; position:fixed; inset:0; z-index:-2; pointer-events:none; background:radial-gradient(circle at 16% 16%, rgba(255,214,233,.36) 0, rgba(255,214,233,0) 34%), radial-gradient(circle at 86% 14%, rgba(255,188,221,.22) 0, rgba(255,188,221,0) 28%), radial-gradient(circle at 50% 100%, rgba(240,171,215,.24) 0, rgba(240,171,215,0) 34%);} 
+html:not(.cdg-auth-pending) #cdgLoginGate {display:none!important;}
+.cdg-login *, .cdg-login *::before,.cdg-login *::after {box-sizing:border-box;}
+.cdg-login-glow {position:absolute;z-index:-1;border-radius:50%;filter:blur(10px);opacity:.72;pointer-events:none;mix-blend-mode:screen;}
+.cdg-login-glow-a {left:-135px;top:-130px;width:410px;height:410px;background:radial-gradient(circle,rgba(255,199,227,.68),transparent 69%);}
+.cdg-login-glow-b {right:-130px;bottom:-160px;width:480px;height:480px;background:radial-gradient(circle,rgba(249,201,229,.58),transparent 69%);}
+.cdg-login-card {width:min(100%,455px);margin:auto;padding:clamp(25px,5vw,42px);text-align:center;border:1px solid rgba(255,255,255,.46);border-radius:28px;background:rgba(255,255,255,.73);-webkit-backdrop-filter:blur(14px) saturate(1.05);backdrop-filter:blur(14px) saturate(1.05);box-shadow:0 24px 70px rgba(79,18,50,.18),0 6px 18px rgba(128,46,89,.08);}
+.cdg-login-logo {display:block;width:min(80%,240px);max-width:240px;height:auto;margin:0 auto 13px;object-fit:contain;}
+.cdg-login-eyebrow {margin:7px 0 12px;font-size:10px;line-height:1.5;color:#b75c8f;font-weight:800;letter-spacing:1.8px;}
+.cdg-login h1 {font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:clamp(28px,5vw,35px);margin:0 0 8px;color:#682345;line-height:1.17;}
+.cdg-login-intro {font-size:14px;line-height:1.65;max-width:345px;margin:0 auto 26px;color:#8a6478;}
+.cdg-login-form {text-align:left;display:flex;flex-direction:column;gap:7px;}
+.cdg-login-form label {margin-top:8px;font-size:13px;font-weight:750;color:#69364e;}
+.cdg-login-form input {width:100%;height:50px;padding:0 15px;border-radius:13px;border:1px solid #f0cedf;background:#fffafb;color:#4f2540;outline:none;font:500 15px/1.2 inherit;transition:border-color .15s,box-shadow .15s;}
+.cdg-login-form input::placeholder {color:#b5a0ae;}
+.cdg-login-form input:focus {border-color:#ed58a7;box-shadow:0 0 0 3px rgba(236,70,147,.13);}
+.cdg-login-password {position:relative;}
+.cdg-login-password input {padding-right:94px;}
+.cdg-show-password {position:absolute;top:0;right:5px;height:50px;padding:0 12px;background:transparent;border:0;color:#c02377;font-size:12px;font-weight:700;cursor:pointer;}
+.cdg-show-password:focus-visible,.cdg-login-submit:focus-visible {outline:3px solid #e665a9;outline-offset:3px;}
+.cdg-login-feedback {min-height:17px;color:#b32950;font-size:12px;font-weight:600;margin:4px 1px 0;text-align:left;}
+.cdg-login-submit {display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:52px;margin-top:1px;padding:12px 20px;border:none;border-radius:15px;background:linear-gradient(125deg,#f65aaa,#df1682);color:white;box-shadow:0 9px 20px rgba(223,22,130,.18);font-size:14px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s;}
+.cdg-login-submit:hover {transform:translateY(-1px);box-shadow:0 12px 25px rgba(223,22,130,.24);}
+.cdg-login-submit:disabled {opacity:.55;cursor:wait;transform:none;}
+.cdg-login-footnote {margin:23px 0 0;font-size:11px;color:#b17a97;}
+@media(max-width:480px) {.cdg-login-card{border-radius:23px;padding:25px 21px}.cdg-login-intro{font-size:13px}.cdg-login-logo{max-width:195px}.cdg-login-submit{font-size:13px} }
+@media(prefers-reduced-motion:reduce){.cdg-login *{transition:none!important;}}
+
+/* Identidade da tela de acesso e fluxo de recuperação. */
+#cdgLoginGate [hidden] {display:none!important}
+.cdg-access-mark {display:flex;align-items:center;justify-content:center;gap:9px;margin:5px auto 17px;color:#b82379;font-size:12px;font-weight:850;letter-spacing:1.65px;}
+.cdg-access-lock {display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:13px;background:linear-gradient(145deg,#ffb7dd,#ffe7f3);color:#aa1d6b;box-shadow:0 4px 10px rgba(213,52,129,.12)}
+.cdg-access-lock svg {width:20px;height:20px}
+.cdg-login-link {border:0;background:transparent;color:#bf2b81;font-size:13px;font-weight:700;cursor:pointer;text-align:center;align-self:center;margin:6px 0 0;padding:7px 10px;text-decoration:underline;text-underline-offset:3px;}
+.cdg-login-link:hover {color:#8e1459}
+.cdg-login-link:focus-visible,.cdg-recovery-whatsapp:focus-visible {outline:3px solid #e665a9;outline-offset:3px;border-radius:7px}
+.cdg-recovery {text-align:left;margin-top:4px}
+.cdg-recovery h2 {font-family:Georgia,serif;text-align:center;color:#682345;font-size:26px;line-height:1.2;margin:0 0 7px}
+.cdg-recovery-intro {text-align:center;color:#8a6478;font-size:13px;line-height:1.6;margin:0 0 20px}
+.cdg-recovery-result {border-radius:15px;padding:18px 16px 16px;background:#fff2f9;border:1px solid #f0c5db;margin:20px 0 4px}
+.cdg-recovery-result-title {display:flex;align-items:center;gap:7px;color:#ab2370;font-size:13px;font-weight:800;margin:0 0 14px}
+.cdg-recovery-result-title svg {width:20px;height:20px}
+.cdg-recovery-credential {display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px 12px;margin:11px 0;color:#7f5166;font-size:13px}
+.cdg-recovery-credential strong {color:#622343;font-size:14px;user-select:text;overflow-wrap:anywhere}
+.cdg-recovery-whatsapp {display:flex;align-items:center;justify-content:center;gap:7px;border-radius:11px;background:#158a58;color:#fff;text-decoration:none;padding:12px 9px;margin-top:17px;font-size:12px;font-weight:800;line-height:1.45;text-align:center}
+.cdg-recovery-whatsapp:hover {background:#0e7548;color:#fff}
+.cdg-back-to-login {display:block;margin:15px auto 0}
+@media(max-width:380px){.cdg-recovery-credential{align-items:flex-start;flex-direction:column}}
+
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  #cdgLoginGate {background:linear-gradient(180deg,#fff1f7 0%,#fff8fb 50%,#fff2f8 100%);} 
+  .cdg-login-card {background:rgba(255,255,255,.95);} 
+}
+
+/* Redes sociais discretas no rodapé do cartão de login (inclusive na recuperação). */
+.cdg-login-socials {display:flex; align-items:center; justify-content:center; gap:12px; margin:14px auto 0;}
+.cdg-login-social {display:grid; place-items:center; width:39px; height:39px; flex:none; border-radius:50%; border:1px solid rgba(207,93,146,.24); background:rgba(255,250,253,.77); color:#a72c72; text-decoration:none; box-shadow:0 3px 12px rgba(121,51,83,.05); transition:transform .16s ease,background .16s ease,color .16s ease;}
+.cdg-login-social svg {width:19px; height:19px; display:block;}
+.cdg-login-social:hover {background:#f9deec; color:#852359; transform:translateY(-2px);}
+.cdg-login-social:focus-visible {outline:3px solid #e665a9; outline-offset:3px;}
+@media (prefers-reduced-motion:reduce) {.cdg-login-social {transition:none!important;} .cdg-login-social:hover {transform:none;}}
+
+/* Fundo oficial escolhido para o login: usa a arte recebida, não o site atrás da camada. */
+#cdgLoginGate {
+  background-color:#6b1b46;
+  background-image:linear-gradient(rgba(47,6,29,.13),rgba(47,6,29,.19)),url('../images/login/fundo-cinema-das-girls.webp');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+}
+#cdgLoginGate::before,#cdgLoginGate::after,.cdg-login-glow {display:none;}
+#cdgLoginGate .cdg-login-card {
+  background:rgba(255,255,255,.90);
+  border:1px solid rgba(255,255,255,.72);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+  box-shadow:0 22px 76px rgba(32,1,24,.38),0 6px 20px rgba(85,11,58,.13);
+}
+@media(max-width:640px) {
+  #cdgLoginGate {background-position:50% center;padding:16px;}
+  #cdgLoginGate .cdg-login-card {background:rgba(255,255,255,.94);}
+}

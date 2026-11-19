@@ -1,0 +1,113 @@
+/* Cinema das Girls — ajustes específicos para telas pequenas, desbloqueio e tutorial interativo. */
+/* Cartaz vertical em todas as telas de desbloqueio; arte desktop preservada via <picture>. */
+#app > .unlock-shell .locked-art > .locked-responsive-picture {
+  position:relative; display:block; width:100%; height:100%; overflow:hidden;
+}
+#app > .unlock-shell .locked-art > .locked-responsive-picture > img {
+  display:block; width:100%; height:100%; object-fit:cover;
+}
+@media(max-width:899px) {
+  #app > .unlock-shell .locked-art,
+  #app > .unlock-shell .locked-art.cinelove-locked-poster,
+  #app > .unlock-shell .locked-art.monster-locked-poster {
+    display:block!important;
+    box-sizing:border-box!important;
+    position:relative!important;
+    width:min(62vw,250px)!important;
+    min-width:0!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:2/3!important;
+    border-radius:17px!important;
+    margin:0 auto 10px!important;
+    background:linear-gradient(140deg,#fbe3f3,#d9b7e8)!important;
+    overflow:hidden!important;
+  }
+  #app > .unlock-shell .locked-art > .locked-responsive-picture {
+    position:absolute!important; inset:0!important; width:100%!important; height:100%!important;
+  }
+  #app > .unlock-shell .locked-art > .locked-responsive-picture > img {
+    display:block!important; position:absolute!important; inset:0!important;
+    width:100%!important; height:100%!important;
+    object-fit:contain!important; object-position:center!important;
+    filter:none!important;
+  }
+  #app > .unlock-shell .locked-main {padding-top:11px!important;}
+}
+@media(max-width:380px){
+  #app > .unlock-shell .locked-art,
+  #app > .unlock-shell .locked-art.cinelove-locked-poster,
+  #app > .unlock-shell .locked-art.monster-locked-poster {width:min(59vw,220px)!important;}
+}
+/* Banners do carrossel: alterações só no celular. */
+@media(max-width:650px) {
+  #app section.hero.hero-cinelove.home-uniform-hero::before {
+    display:block!important;
+    background:linear-gradient(90deg,rgba(181,126,214,.97) 0%,rgba(177,115,211,.9) 40%,rgba(162,92,196,.58) 70%,rgba(151,84,189,.08) 100%)!important;
+  }
+  #app section.hero.hero-cinelove.home-uniform-hero .cinelove-wash {display:none!important;}
+  #app section.hero.hero-cinelove.home-uniform-hero .hero-content.home-hero-content > .home-hero-title,
+  #app section.hero.hero-cinelove.home-uniform-hero .hero-content.home-hero-content > .home-hero-title.cinelove-wordmark {
+    color:#fff!important;text-shadow:0 2px 10px rgba(54,15,91,.35)!important;
+  }
+  #app section.hero.hero-cinelove.home-uniform-hero .hero-content.home-hero-content > .home-hero-description {
+    color:#fff!important;text-shadow:0 1px 6px rgba(49,11,69,.36)!important;
+  }
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content,
+  #app section.hero.hero-cinelove.home-uniform-hero .hero-content.home-hero-content,
+  #app section.hero.hero-noite.home-uniform-hero .hero-content.home-hero-content {
+    position:relative!important;
+    display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+    justify-content:flex-end!important;
+    height:100%!important;max-height:100%!important;
+    padding:10px 12px 29px 15px!important;
+    transform:translateY(5px)!important;
+  }
+  #app section.hero.hero-moranguinho.home-uniform-hero > img.feature-full-photo {
+    object-position:84% center!important;
+  }
+}
+@media(max-width:360px){
+  #app section.hero.home-uniform-hero .hero-content.home-hero-content,
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content {
+    padding:8px 9px 25px 12px!important;
+    transform:translateY(4px)!important;
+  }
+}
+/* Tutoriais de TV: cada opção é um botão expansível, sem JavaScript extra. */
+#app details.tv-guide-disclosure {display:block!important;min-width:0;align-self:start;}
+#app details.tv-guide-disclosure > summary.tv-guide-summary {
+  display:block;cursor:pointer;list-style:none;outline-offset:4px;
+}
+#app details.tv-guide-disclosure > summary.tv-guide-summary::-webkit-details-marker {display:none;}
+#app details.tv-guide-disclosure > summary.tv-guide-summary::marker {content:'';}
+#app details.tv-guide-disclosure .tv-guide-inner {display:block;}
+#app details.tv-guide-disclosure .tv-guide-method-heading {
+  display:block;font-family:'DM Sans',Arial,sans-serif;
+  color:#a70d5a;font-weight:850;font-size:20px;line-height:1.2;margin:12px 0 6px;
+}
+#app details.tv-guide-disclosure .tv-guide-sub {display:block;}
+#app details.tv-guide-disclosure .tv-guide-expand-label {
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 14px;margin-top:2px;border-radius:999px;
+  font-size:12px;font-weight:850;color:#a70d5a;
+  border:1px solid #f1c5dc;background:#fff8fc;
+}
+#app details.tv-guide-disclosure .tv-guide-expand-label svg {width:15px;height:15px;transition:transform .2s ease;}
+#app details.tv-guide-disclosure[open] .tv-guide-expand-label svg {transform:rotate(90deg);}
+#app details.tv-guide-disclosure[open] .tv-guide-expand-label {background:#e9368e;color:white;border-color:#e9368e;}
+#app details.tv-guide-disclosure .tv-guide-expanded {padding:0 19px 19px;}
+#app details.tv-guide-disclosure > summary.tv-guide-summary:focus-visible {outline:3px solid #e65aa7;outline-offset:3px;}
+@media(min-width:651px) and (max-width:980px){
+  #app details.tv-guide-disclosure > summary.tv-guide-summary {display:flex;gap:0;align-items:stretch;}
+  #app details.tv-guide-disclosure .tv-guide-photo {width:42%;height:auto;aspect-ratio:1.5/1;object-fit:cover;}
+  #app details.tv-guide-disclosure .tv-guide-inner {flex:1;min-width:0;}
+}
+@media(max-width:650px){
+  #app details.tv-guide-disclosure .tv-guide-inner {padding:17px;}
+  #app details.tv-guide-disclosure .tv-guide-expanded {padding:0 17px 18px;}
+  #app details.tv-guide-disclosure .tv-guide-method-heading {font-size:19px;}
+}
+@media(prefers-reduced-motion:reduce){#app details.tv-guide-disclosure .tv-guide-expand-label svg{transition:none;}}

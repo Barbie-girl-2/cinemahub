@@ -1,0 +1,113 @@
+/* 18/11: centralização conjunta da tag, título, descrição, CTA e setas.
+   As proporções dos banners já reduzidos permanecem as mesmas. */
+@media (min-width: 992px) {
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content {
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    gap:0!important;
+    height:100%!important;
+    padding:15px 15px 28px clamp(32px,4.1vw,72px)!important;
+    transform:translateY(-7px)!important;
+  }
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .hero-type {margin:0 0 10px!important;}
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-title {margin:0 0 12px!important;}
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-description {margin:0!important;max-width:min(100%,540px)!important;}
+}
+@media (min-width: 651px) and (max-width: 991px) {
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content {
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    gap:0!important;
+    height:100%!important;
+    padding:12px 12px 26px 35px!important;
+    transform:translateY(-5px)!important;
+  }
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .hero-type {margin:0 0 8px!important;}
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-title {margin:0 0 9px!important;}
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-description {margin:0!important;}
+}
+@media (max-width: 650px) {
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content {
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    gap:0!important;
+    height:100%!important;
+    width:91%!important;
+    max-width:91%!important;
+    padding:9px 8px 19px 15px!important;
+    transform:translateY(-4px)!important;
+  }
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .hero-type {margin:0 0 6px!important;}
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-title {margin:0 0 7px!important;}
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-description {
+    margin:0!important;
+    max-width:83%!important;
+    overflow:visible!important;
+    -webkit-line-clamp:unset!important;
+  }
+}
+@media (max-width: 360px) {
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content {padding:7px 7px 15px 12px!important;}
+}
+/* CTA e setas ficam no fluxo junto dos textos em todos os tamanhos. */
+#app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-actions {
+  position:static!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  transform:none!important;
+  display:flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  align-self:flex-start!important;
+  gap:9px!important;
+  margin:15px 0 0!important;
+  padding:0!important;
+}
+#app section.hero.home-uniform-hero:not(.hero-barbie) .home-hero-actions .home-carousel-arrows {
+  position:static!important;
+  inset:auto!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:7px!important;
+  margin:0!important;
+  transform:none!important;
+}
+@media(max-width:650px){
+  #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content > .home-hero-actions {margin-top:10px!important;gap:7px!important;}
+}
+/* Monster High: na página de desbloqueio mostrar o cartaz original por inteiro,
+   sem usar a imagem horizontal de destaque. */
+#app > .unlock-shell .locked-art.monster-locked-poster {
+  background:linear-gradient(140deg,#1d142c,#372247 58%,#6a3472)!important;
+}
+#app > .unlock-shell .locked-art.monster-locked-poster > img {
+  object-fit:contain!important;
+  object-position:center!important;
+}
+@media(max-width:899px){
+  #app > .unlock-shell .locked-art.monster-locked-poster {
+    width:min(100%,320px)!important;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:2 / 3!important;
+    margin-inline:auto!important;
+  }
+  #app > .unlock-shell .locked-art.monster-locked-poster > img {
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+  }
+}
