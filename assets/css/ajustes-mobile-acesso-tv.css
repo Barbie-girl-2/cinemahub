@@ -73,7 +73,7 @@
   #app section.hero.home-uniform-hero .hero-content.home-hero-content,
   #app section.hero.home-uniform-hero:not(.hero-barbie) .hero-content.home-hero-content {
     padding:8px 9px 25px 12px!important;
-    transform:translateY(4px)!important;
+    transform:translateY(-20px)!important;
   }
 }
 /* Tutoriais de TV: cada opção é um botão expansível, sem JavaScript extra. */
