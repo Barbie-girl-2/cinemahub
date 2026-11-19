@@ -125,6 +125,11 @@
   </style>
   <link rel="stylesheet" href="assets/css/login.css?v=20261119-mobile2">
   <link rel="stylesheet" href="assets/css/ajustes-mobile-acesso-tv.css?v=20261119-mobile2">
+  <!-- Proteção leve contra cópia casual; não impede capturas de tela. -->
+  <style id="cdg-copy-protection">
+    img { -webkit-user-drag: none; user-drag: none; }
+    img, .brand-logo-img { -webkit-user-select: none; user-select: none; }
+  </style>
 </head>
 <body>
   <main id="cdgLoginGate" class="cdg-login" role="main" aria-label="Entrar no Cinema das Girls">
@@ -277,5 +282,14 @@
 <script src="assets/js/login.js?v=20261119-recuperacao-v4-clique"></script>
 <script src="assets/js/site.js"></script>
 
+  <script id="cdg-copy-protection-script">
+    // Protege imagens sem interferir em formulários, links, botões ou players.
+    document.addEventListener('contextmenu', function (event) {
+      if (event.target.closest('img')) event.preventDefault();
+    });
+    document.addEventListener('dragstart', function (event) {
+      if (event.target.closest('img')) event.preventDefault();
+    });
+  </script>
 </body>
 </html>
