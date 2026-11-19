@@ -63,7 +63,7 @@
     justify-content:flex-end!important;
     height:100%!important;max-height:100%!important;
     padding:10px 12px 29px 15px!important;
-    transform:translateY(5px)!important;
+    transform:translateY(-20px)!important;
   }
   #app section.hero.hero-moranguinho.home-uniform-hero > img.feature-full-photo {
     object-position:84% center!important;
