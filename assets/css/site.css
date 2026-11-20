@@ -4047,3 +4047,14 @@ body.locked-route .topbar .profile-dropdown{z-index:70}
   #app .catalog-hero.scary-animations-hero {aspect-ratio:2.3/1;max-height:210px;border-radius:15px;}
   #app .catalog-hero.scary-animations-hero img {object-fit:contain;}
 }
+
+/* Cinema das Girls — botão Assistir agora compacto somente no banner Quebra-Nozes */
+#app .franchise-page .barbie-nut-banner .barbie-nut-watch {
+  display: inline-flex !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  flex: 0 0 auto !important;
+  padding: 10px 20px !important;
+  min-height: 42px !important;
+  font-size: 14px !important;
+}
