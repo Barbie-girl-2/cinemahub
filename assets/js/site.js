@@ -6,7 +6,7 @@
   const STORE_ACCESS='cdg_preview_access_v3';
   const PREVIOUS_STORE_ACCESS='cdg_preview_access_v2';
   const STORE_FAV='cdg_preview_favs_v2';
-  const DEMO_CODES={barbie:'BARBIEGIRL24',monster:'MONSTER50',winx:'WINX10',moranguinho:'M0RANGUINH055',espias:'TRES3',miraculous:'LADYBUG05',bratz:'BRATZ5X3','hello-kitty':'KITTY02',cinelove:'LOVES2S2','harry-potter':'HP2000','noite-das-girls':'NOITE333',terror:'TERROR03','animacoes-assustadoras':'SUSTO22',myscene:'SCENE02'};
+  const DEMO_CODES={barbie:'BARBIEGIRL24',monster:'MONSTER50',winx:'WINX10',moranguinho:'M0RANGUINH055',espias:'TRES3',miraculous:'LADYBUG05',bratz:'BRATZ5X3','hello-kitty':'KITTY02',cinelove:'LOVES2S2','harry-potter':'HP2000','crepusculo':'VAMPIRO1','barbie-dreamhouse':'DREAMHOUSE5962','noite-das-girls':'NOITE333',terror:'TERROR03','animacoes-assustadoras':'SUSTO22',myscene:'SCENE02'};
   const NOITE_POSTER='assets/images/01/016-848eb1138e7a.webp';
   const NOITE_LOCKED_POSTER='assets/images/01/017-38f33fcc25e1.webp';
   const NOITE_BANNER='assets/images/01/018-110f725c49f0.webp';
