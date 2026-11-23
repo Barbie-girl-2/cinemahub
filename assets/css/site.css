@@ -4060,7 +4060,7 @@ body.locked-route .topbar .profile-dropdown{z-index:70}
 }
 
 /* Black Friday: arte integral com CTA sobre a faixa rosa inferior */
-.cdg-blackfriday-banner{position:relative;width:100%;aspect-ratio:1672/941;overflow:hidden;border-radius:20px;background:#f78acb}
+.cdg-blackfriday-banner{position:relative;width:100%;aspect-ratio:1436/492;overflow:hidden;border-radius:20px;background:#f78acb}
 .cdg-blackfriday-banner>img{display:block;width:100%;height:100%;object-fit:fill}
 .cdg-blackfriday-cta{position:absolute;left:29.5%;top:74.2%;width:40.8%;height:12.5%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff!important;font-weight:900;font-size:clamp(12px,2.4vw,38px);letter-spacing:.025em;text-shadow:0 2px 5px #7e004a;z-index:2;border-radius:80px}
 .cdg-blackfriday-cta:hover{background:rgba(255,255,255,.12)}
@@ -4068,3 +4068,9 @@ body.locked-route .topbar .profile-dropdown{z-index:70}
 .cdg-blackfriday-banner .home-carousel-arrows button{pointer-events:auto}
 .cdg-home-barbie-series{margin:24px 0}.cdg-home-barbie-series h3{margin:0 0 15px}.cdg-home-barbie-series-grid{display:grid;grid-template-columns:repeat(2,minmax(0,190px));gap:16px}.cdg-home-series-card{border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;padding:0}.cdg-home-series-card img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:12px}.cdg-home-series-card strong{display:block;margin-top:9px;font-size:14px}
 @media(max-width:600px){.cdg-blackfriday-banner{border-radius:12px}.cdg-blackfriday-cta{font-size:clamp(10px,3vw,18px)}.cdg-home-barbie-series-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Banner Black Friday: imagem inteira abre checkout, setas ficam ao lado da faixa rosa. */
+#app .cdg-blackfriday-banner .cdg-blackfriday-full-link{position:absolute;inset:0;z-index:2;display:block;cursor:pointer}
+#app .cdg-blackfriday-banner .home-carousel-arrows{position:absolute;top:73%;left:23%;width:54%;height:15%;inset:auto;display:flex;align-items:center;justify-content:space-between;padding:0;z-index:4;pointer-events:none}
+#app .cdg-blackfriday-banner .home-carousel-arrows .banner-arrow{position:relative!important;inset:auto!important;transform:none!important;flex:0 0 auto;width:clamp(28px,3.2vw,43px)!important;height:clamp(28px,3.2vw,43px)!important;pointer-events:auto;cursor:pointer}
+@media(max-width:600px){#app .cdg-blackfriday-banner .home-carousel-arrows{left:21%;width:58%;top:73%;height:15%}#app .cdg-blackfriday-banner .home-carousel-arrows .banner-arrow{width:25px!important;height:25px!important}}
