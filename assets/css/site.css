@@ -4203,3 +4203,13 @@ body.locked-route .topbar .profile-dropdown{z-index:70}
   }
   #app .cdg-blackfriday-banner > img{object-fit:contain!important;}
 }
+
+/* Pop-up Black Friday: a caixa acompanha a proporção vertical real da arte. */
+.cdg-bf-popup-backdrop{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(47,7,41,.63);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.cdg-bf-popup-panel{position:relative;flex:none;width:min(660px,calc(100vw - 24px),calc((100dvh - 24px)*1122/1402));aspect-ratio:1122/1402;max-height:calc(100dvh - 24px);background:transparent;border:0;border-radius:0;box-shadow:0 16px 55px rgba(35,0,30,.3);overflow:visible}
+.cdg-bf-popup-link{display:block;width:100%;height:100%;border:0;border-radius:0;overflow:hidden;cursor:pointer}
+.cdg-bf-popup-link img{display:block;width:100%;height:100%;object-fit:contain;border:0;border-radius:0}
+.cdg-bf-popup-close{position:absolute;top:9px;right:9px;z-index:2;width:40px;height:40px;border:2px solid #fff;border-radius:50%;background:#fff7fc;color:#b50867;font-size:27px;font-weight:700;line-height:1;display:grid;place-items:center;box-shadow:0 5px 16px rgba(69,9,50,.26);cursor:pointer}
+.cdg-bf-popup-close:hover{background:#ffe3f2}
+.cdg-bf-popup-close:focus-visible{outline:3px solid #9d0052;outline-offset:3px}
+@media(max-width:550px){.cdg-bf-popup-backdrop{padding:10px}.cdg-bf-popup-panel{width:min(calc(100vw - 20px),calc((100dvh - 20px)*1122/1402));max-height:calc(100dvh - 20px)}.cdg-bf-popup-close{top:7px;right:7px;width:34px;height:34px;font-size:24px}}
